@@ -1,0 +1,833 @@
+{
+  "questions": [
+    {
+      "question": "青岛港当前有哪些值得关注的风险？",
+      "intent": "当前风险",
+      "answer": "1. 当前有效风险\n- 山东-海上风险预警信息(2026年第22期)-黄色：山东省气象台发布海上大风黄色预警，受气旋影响，预计19日白天至20日夜间黄海中部、北部及渤海海域有北风7-8级阵风9-10级。山东省海上搜救中心于6月19日06时30分发布海上风险黄色预警信息。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-816CC9019028）\n\n2. 已解除但需留档\n- 解除-海上风险预警信息(2026年第25期)-黄色：山东省气象台于2026年7月14日16时解除台风黄色预警和海上大风黄色预警，台风“巴威”已减弱并远离，风力减弱。山东省海上搜救中心于16时30分解除预警。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-E74467FF16C4）\n- 解除-海上风险预警信息(2026年第22期)-黄色：山东省气象台于2026年6月20日06时解除海上大风黄色预警，黄海北部和中部风力已明显减弱，预计20日白天黄海中部和北部北风6级阵风7-8级减弱到5-6级，渤海和渤海海峡北风5-6级。山东省海上搜救中心于2026年6月20日06时30分解除第22期海上风险黄色预警信息。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-BAFD33B84451）\n- 解除-海上风险预警信息(2026年第21期)-黄色：山东省气象台于2026年6月15日06时00分解除海上大雾黄色预警，各预报海区能见度明显好转；山东省海上搜救中心于2026年6月15日06时20分解除2026年第21期海上风险黄色预警信息。｜地域：山东全省｜与青岛港关系：省级背景，是否影响青岛港需另行核对｜证据已逐字定位｜待真人核验（document_id: DOC-5EDAF376FA28）\n\n3. 可能影响的区域和业务环节\n- 黄海相关海域：海上作业船只及人员安全风险增加，可能引发海上突发事件，需实施禁限航等措施。\n\n4. 建议核对动作\n- 各单位密切跟踪海上气象变化，科学实施禁限航，落实防抗措施，提醒海上作业船只及人员提前防范。\n\n5. 证据不足项\n- 山东-海上风险预警信息(2026年第25期)-黄色：山东省海上搜救中心发布海上风险黄色预警，受第9号台风“巴威”影响，预计12日至14日山东沿海及黄海海域将有强风天气，风力可达7-10级。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据待逐字核验｜待真人核验（document_id: DOC-F1599B15D0AA）",
+      "citation_count": 5,
+      "citations": [
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月19日06时00分发布海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于7月11日11时30分发布台风黄色、海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于2026年7月14日16时解除台风黄色预警和海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月20日06时解除海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "quote": "山东省气象台于2026年6月15日06时00分解除海上大雾黄色预警：目前，我省各预报海区能见度已明显好转。",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        }
+      ],
+      "event_metadata": [
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "山东省各预报海区",
+          "evidence_verified": 1,
+          "geography_level": 3,
+          "geography_scope": "山东全省",
+          "qingdao_relation": "省级背景，是否影响青岛港需另行核对",
+          "impact_relation": "补充背景"
+        },
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "黄海中部、黄海北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海中部和北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海北部、黄海中部、渤海海峡、渤海",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "山东省沿海、渤海、渤海海峡、黄海北部、黄海中部、半岛及内陆湖面",
+          "evidence_verified": 0,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        }
+      ]
+    },
+    {
+      "question": "历史上有哪些中高风险需要留档？",
+      "intent": "历史风险",
+      "answer": "1. 历史中高风险\n- 山东-海上风险预警信息(2026年第22期)-黄色：山东省气象台发布海上大风黄色预警，受气旋影响，预计19日白天至20日夜间黄海中部、北部及渤海海域有北风7-8级阵风9-10级。山东省海上搜救中心于6月19日06时30分发布海上风险黄色预警信息。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-816CC9019028）\n- 山东-海上风险预警信息(2026年第25期)-黄色：山东省海上搜救中心发布海上风险黄色预警，受第9号台风“巴威”影响，预计12日至14日山东沿海及黄海海域将有强风天气，风力可达7-10级。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据待逐字核验｜待真人核验（document_id: DOC-F1599B15D0AA）\n\n2. 当前状态说明\n- 历史记录不等于当前仍有效；使用前必须查看同一事件是否已有解除或更新记录。\n\n3. 证据不足项\n- 引用未定位、低业务价值或仅为活动宣传的记录未用于补足列表。",
+      "citation_count": 2,
+      "citations": [
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月19日06时00分发布海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于7月11日11时30分发布台风黄色、海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        }
+      ],
+      "event_metadata": [
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "黄海中部、黄海北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "山东省沿海、渤海、渤海海峡、黄海北部、黄海中部、半岛及内陆湖面",
+          "evidence_verified": 0,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        }
+      ]
+    },
+    {
+      "question": "哪些风险已经解除？",
+      "intent": "已解除风险",
+      "answer": "1. 当前有效风险\n- 当前知识库中没有足够的公开来源支持存在仍有效的中高风险。\n\n2. 已解除但需留档\n- 解除-海上风险预警信息(2026年第25期)-黄色：山东省气象台于2026年7月14日16时解除台风黄色预警和海上大风黄色预警，台风“巴威”已减弱并远离，风力减弱。山东省海上搜救中心于16时30分解除预警。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-E74467FF16C4）\n- 解除-海上风险预警信息(2026年第22期)-黄色：山东省气象台于2026年6月20日06时解除海上大风黄色预警，黄海北部和中部风力已明显减弱，预计20日白天黄海中部和北部北风6级阵风7-8级减弱到5-6级，渤海和渤海海峡北风5-6级。山东省海上搜救中心于2026年6月20日06时30分解除第22期海上风险黄色预警信息。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-BAFD33B84451）\n- 解除-海上风险预警信息(2026年第21期)-黄色：山东省气象台于2026年6月15日06时00分解除海上大雾黄色预警，各预报海区能见度明显好转；山东省海上搜救中心于2026年6月15日06时20分解除2026年第21期海上风险黄色预警信息。｜地域：山东全省｜与青岛港关系：省级背景，是否影响青岛港需另行核对｜证据已逐字定位｜待真人核验（document_id: DOC-5EDAF376FA28）\n\n3. 可能影响的区域和业务环节\n- 黄海相关海域：台风影响减弱，海上风力减小，对航行和作业的影响降低。\n- 黄海相关海域：海上风力减弱，对船舶航行和作业的威胁降低，但仍有5-6级风，需注意防范。\n\n4. 建议核对动作\n- 继续检查权威来源，不用历史活动或宣传稿填充当前风险。\n\n5. 证据不足项\n- 未在检索结果中出现或无法映射到真实 document_id 的结论均未纳入。",
+      "citation_count": 3,
+      "citations": [
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于2026年7月14日16时解除台风黄色预警和海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月20日06时解除海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "quote": "山东省气象台于2026年6月15日06时00分解除海上大雾黄色预警：目前，我省各预报海区能见度已明显好转。",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        }
+      ],
+      "event_metadata": [
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "山东省各预报海区",
+          "evidence_verified": 1,
+          "geography_level": 3,
+          "geography_scope": "山东全省",
+          "qingdao_relation": "省级背景，是否影响青岛港需另行核对",
+          "impact_relation": "补充背景"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海中部和北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海北部、黄海中部、渤海海峡、渤海",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        }
+      ]
+    },
+    {
+      "question": "最近有哪些政策或流程便利机会？",
+      "intent": "政策机会",
+      "answer": "1. 直接商业机会\n- 当前知识库没有足够证据。\n\n2. 政策或流程便利\n- 威海海事局 2026-07-09 公开资料：7月6日，威海海事局编制的《“十五五”威海市海上搜寻救助能力建设规划》（以下简称《规划》）正式以威海市海上搜救中心名义印发。《规划》系统谋划了2026年至2030年全市海上搜寻救助能力建设的蓝图，为威海海洋经济高质量发展和人民群众海上安全出行提供坚实保障。《规划》的发布实施，标志着威海市海上搜寻救助能力建设工作迈上了一个新台阶。为加强与《山东省海上搜救和溢油｜地域：其他山东城市｜与青岛港关系：未发现与青岛港业务链的明确直接关系｜证据待逐字核验｜待真人核验（document_id: DOC-9B14EEC99041）\n\n3. 长期行业趋势\n- 当前知识库没有足够证据。\n\n4. 尚无明确商业动作的信息\n- 当前知识库没有足够证据。",
+      "citation_count": 1,
+      "citations": [
+        {
+          "document_id": "DOC-9B14EEC99041",
+          "title": "《“十五五”威海市海上搜寻救助能力建设规划》正式发布",
+          "quote": "《规划》系统谋划了2026年至2030年全市海上搜寻救助能力建设的蓝图",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        }
+      ],
+      "event_metadata": [
+        {
+          "document_id": "DOC-9B14EEC99041",
+          "title": "《“十五五”威海市海上搜寻救助能力建设规划》正式发布",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "威海市",
+          "evidence_verified": 0,
+          "geography_level": 4,
+          "geography_scope": "其他山东城市",
+          "qingdao_relation": "未发现与青岛港业务链的明确直接关系",
+          "impact_relation": "背景信息"
+        }
+      ]
+    },
+    {
+      "question": "最近有哪些招标采购机会？",
+      "intent": "招标采购",
+      "answer": "当前知识库中没有足够的公开来源支持这一结论。",
+      "citation_count": 0,
+      "citations": [],
+      "event_metadata": []
+    },
+    {
+      "question": "青岛港最近有哪些港口运营动态？",
+      "intent": "港口运营动态",
+      "answer": "当前知识库中没有足够的公开来源支持这一结论。",
+      "citation_count": 0,
+      "citations": [],
+      "event_metadata": []
+    },
+    {
+      "question": "有哪些值得长期观察的行业趋势？",
+      "intent": "长期行业趋势",
+      "answer": "基于当前知识库检索到的公开来源，以下为快速回答结果：\n- 山东海事局六维发力护航青岛建设世界一流国际航运中心：2026年7月22日，山东海事局发布信息，青岛国际航运中心在《新华·波罗的海国际航运中心发展指数报告（2026）》中排名全球第12位，超越休斯顿，蝉联北方港口群之首。山东海事局在基建、智慧、绿色、服务、人文、产业六方面推出多项举措，包括出台管理办法、新划设锚地、推动智能航运试点、保障绿色甲醇加注等。｜地域：青岛港和青岛辖区｜与青岛港关系：直接涉及青岛港或青岛辖区｜证据已逐字定位｜待真人核验（document_id: DOC-2552CC83E784）\n- 政务中心 2026-07-03 公开资料：实施当日，青岛海事局为来办理船舶过户的服务相对人详细讲解了海船开航“一件事”线上办理方式，并指导申请人通过线上“海事通”APP“一件事”模块一次性完成4项业务申报，之后专人全流程跟踪协调当日完成所有事项办理。此次首日首单业务的顺利完成，是山东海事局在深化政务服务集成办改革领域取得的又一重要突破，山东海事局将不断拓展船舶全生命周期典型场景关联事项集成办应用，持｜地域：青岛港和青岛辖区｜与青岛港关系：直接涉及青岛港或青岛辖区｜证据已逐字定位｜待真人核验（document_id: DOC-A688BF1982FC）\n- 指挥中心 2026-06-19 公开资料：山东省海上风险预警信息山东省海上搜救中心办公室 签发：刘纪涛山东-海上风险预警信息(2026年第22期)-黄色山东省气象台于2026年6月19日06时00分发布海上大风黄色预警：受气旋影响，预计，19日白天，黄海中部南风5～6级转北风7级阵风8～9级，渤海、渤海海峡和黄海北部南风转偏东风5～6级；19日夜间，黄海中部北风7～8级阵风9～10级，黄海北部偏东风｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-816CC9019028）\n- 指挥中心 2026-07-14 公开资料：山东省海上风险预警信息发往：各市海上搜救中心，省交通运输厅、农业农村厅、气象局，北海救助局，国家海洋局北海分局。抄送：中国海上搜救中心、天津市海上搜救中心、辽宁省海上搜救中心、河北省海上搜救中心、连云港市海上搜救中心。山东省海上搜救中心办公室 签发：王宝祥解除—海上风险黄色预警信息（2026 年第 25 期）山东省气象台于2026年7月14日16时解除台风黄｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-E74467FF16C4）\n- 指挥中心 2026-06-20 公开资料：山东省海上风险预警信息发往：各市海上搜救中心，省交通运输厅、农业农村厅、气象局，北海救助局，国家海洋局北海分局。抄送：中国海上搜救中心、天津市海上搜救中心、辽宁省海上搜救中心、河北省海上搜救中心、连云港市海上搜救中心。山东省海上搜救中心办公室 签发：刘纪涛解除—海上风险黄色预警信息（2026 年第 22 期）山东省气象台于2026年6月20日06时解除海上大｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-BAFD33B84451）\n以上仅整理已检索公开资料；影响判断和业务动作仍需核对原文并由人工确认。",
+      "citation_count": 8,
+      "citations": [
+        {
+          "document_id": "DOC-2552CC83E784",
+          "title": "山东海事局六维发力护航青岛建设世界一流国际航运中心",
+          "quote": "青岛国际航运中心排名跃升至全球第12位，超越休斯顿，蝉联北方港口群之首",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-A688BF1982FC",
+          "title": "海船开航“一件事”全国实施 山东完成首日首单业务办理",
+          "quote": "2026年7月1日，海船开航 “一件事” 在全国实施，“海事通”端专属模块正式上线。",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月19日06时00分发布海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于2026年7月14日16时解除台风黄色预警和海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月20日06时解除海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于7月11日11时30分发布台风黄色、海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "quote": "山东省气象台于2026年6月15日06时00分解除海上大雾黄色预警：目前，我省各预报海区能见度已明显好转。",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-9B14EEC99041",
+          "title": "《“十五五”威海市海上搜寻救助能力建设规划》正式发布",
+          "quote": "《规划》系统谋划了2026年至2030年全市海上搜寻救助能力建设的蓝图",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        }
+      ],
+      "event_metadata": [
+        {
+          "document_id": "DOC-2552CC83E784",
+          "title": "山东海事局六维发力护航青岛建设世界一流国际航运中心",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "青岛港及山东沿海港口",
+          "evidence_verified": 1,
+          "geography_level": 1,
+          "geography_scope": "青岛港和青岛辖区",
+          "qingdao_relation": "直接涉及青岛港或青岛辖区",
+          "impact_relation": "直接影响"
+        },
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "山东省各预报海区",
+          "evidence_verified": 1,
+          "geography_level": 3,
+          "geography_scope": "山东全省",
+          "qingdao_relation": "省级背景，是否影响青岛港需另行核对",
+          "impact_relation": "补充背景"
+        },
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "黄海中部、黄海北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-9B14EEC99041",
+          "title": "《“十五五”威海市海上搜寻救助能力建设规划》正式发布",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "威海市",
+          "evidence_verified": 0,
+          "geography_level": 4,
+          "geography_scope": "其他山东城市",
+          "qingdao_relation": "未发现与青岛港业务链的明确直接关系",
+          "impact_relation": "背景信息"
+        },
+        {
+          "document_id": "DOC-A688BF1982FC",
+          "title": "海船开航“一件事”全国实施 山东完成首日首单业务办理",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "山东辖区",
+          "evidence_verified": 1,
+          "geography_level": 3,
+          "geography_scope": "山东全省",
+          "qingdao_relation": "省级背景，是否影响青岛港需另行核对",
+          "impact_relation": "补充背景"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海中部和北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海北部、黄海中部、渤海海峡、渤海",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "山东省沿海、渤海、渤海海峡、黄海北部、黄海中部、半岛及内陆湖面",
+          "evidence_verified": 0,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        }
+      ]
+    },
+    {
+      "question": "本期重点事项的原始出处是什么？",
+      "intent": "来源核验",
+      "answer": "1. 可核验来源\n- 山东海事局六维发力护航青岛建设世界一流国际航运中心｜发布机构：船舶监督处｜日期：2026-07-22｜document_id: DOC-2552CC83E784\n- 指挥中心 2026-06-19 公开资料｜发布机构：指挥中心｜日期：2026-06-19｜document_id: DOC-816CC9019028\n- 指挥中心 2026-07-14 公开资料｜发布机构：指挥中心｜日期：2026-07-14｜document_id: DOC-E74467FF16C4\n- 指挥中心 2026-06-20 公开资料｜发布机构：指挥中心｜日期：2026-06-20｜document_id: DOC-BAFD33B84451\n- 指挥中心 2026-07-11 公开资料｜发布机构：指挥中心｜日期：2026-07-11｜document_id: DOC-F1599B15D0AA\n\n2. 核验规则\n- 仅列出当前文档版本中已逐字绑定证据的事项；点击来源卡片打开原文复核。",
+      "citation_count": 8,
+      "citations": [
+        {
+          "document_id": "DOC-2552CC83E784",
+          "title": "山东海事局六维发力护航青岛建设世界一流国际航运中心",
+          "quote": "青岛国际航运中心排名跃升至全球第12位，超越休斯顿，蝉联北方港口群之首",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月19日06时00分发布海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于2026年7月14日16时解除台风黄色预警和海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月20日06时解除海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于7月11日11时30分发布台风黄色、海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-A688BF1982FC",
+          "title": "海船开航“一件事”全国实施 山东完成首日首单业务办理",
+          "quote": "2026年7月1日，海船开航 “一件事” 在全国实施，“海事通”端专属模块正式上线。",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "quote": "山东省气象台于2026年6月15日06时00分解除海上大雾黄色预警：目前，我省各预报海区能见度已明显好转。",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-9B14EEC99041",
+          "title": "《“十五五”威海市海上搜寻救助能力建设规划》正式发布",
+          "quote": "《规划》系统谋划了2026年至2030年全市海上搜寻救助能力建设的蓝图",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        }
+      ],
+      "event_metadata": [
+        {
+          "document_id": "DOC-2552CC83E784",
+          "title": "山东海事局六维发力护航青岛建设世界一流国际航运中心",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "青岛港及山东沿海港口",
+          "evidence_verified": 1,
+          "geography_level": 1,
+          "geography_scope": "青岛港和青岛辖区",
+          "qingdao_relation": "直接涉及青岛港或青岛辖区",
+          "impact_relation": "直接影响"
+        },
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "山东省各预报海区",
+          "evidence_verified": 1,
+          "geography_level": 3,
+          "geography_scope": "山东全省",
+          "qingdao_relation": "省级背景，是否影响青岛港需另行核对",
+          "impact_relation": "补充背景"
+        },
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "黄海中部、黄海北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-9B14EEC99041",
+          "title": "《“十五五”威海市海上搜寻救助能力建设规划》正式发布",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "威海市",
+          "evidence_verified": 0,
+          "geography_level": 4,
+          "geography_scope": "其他山东城市",
+          "qingdao_relation": "未发现与青岛港业务链的明确直接关系",
+          "impact_relation": "背景信息"
+        },
+        {
+          "document_id": "DOC-A688BF1982FC",
+          "title": "海船开航“一件事”全国实施 山东完成首日首单业务办理",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "山东辖区",
+          "evidence_verified": 1,
+          "geography_level": 3,
+          "geography_scope": "山东全省",
+          "qingdao_relation": "省级背景，是否影响青岛港需另行核对",
+          "impact_relation": "补充背景"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海中部和北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海北部、黄海中部、渤海海峡、渤海",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "山东省沿海、渤海、渤海海峡、黄海北部、黄海中部、半岛及内陆湖面",
+          "evidence_verified": 0,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        }
+      ]
+    },
+    {
+      "question": "与上一期相比，本期风险发生了什么变化？",
+      "intent": "时间对比",
+      "answer": "1. 本期可核验变化\n- 船舶监督处 2026-07-22 公开资料：在智慧口岸建设方面，保障董家口港区液体化工码头正式对外启用，优化“关港通”“云港通”“山港通”等服务模式，推进查验流程无纸化、智能化、便利化。绿色转型，培育低碳“新动能”。牵头开展《山东海事局水上船舶新型燃料加注作业安全与防污染监督管理办法》宣贯，覆盖辖区相关单位170余人次。保障青岛港完成北方首单绿色甲醇船船加注，实现“一船多供”“山东制造—山东储运—山港｜地域：青岛港和青岛辖区｜与青岛港关系：直接涉及青岛港或青岛辖区｜证据已逐字定位｜待真人核验（document_id: DOC-2552CC83E784）\n- 政务中心 2026-07-03 公开资料：实施当日，青岛海事局为来办理船舶过户的服务相对人详细讲解了海船开航“一件事”线上办理方式，并指导申请人通过线上“海事通”APP“一件事”模块一次性完成4项业务申报，之后专人全流程跟踪协调当日完成所有事项办理。此次首日首单业务的顺利完成，是山东海事局在深化政务服务集成办改革领域取得的又一重要突破，山东海事局将不断拓展船舶全生命周期典型场景关联事项集成办应用，持｜地域：青岛港和青岛辖区｜与青岛港关系：直接涉及青岛港或青岛辖区｜证据已逐字定位｜待真人核验（document_id: DOC-A688BF1982FC）\n- 山东-海上风险预警信息(2026年第22期)-黄色：山东省气象台发布海上大风黄色预警，受气旋影响，预计19日白天至20日夜间黄海中部、北部及渤海海域有北风7-8级阵风9-10级。山东省海上搜救中心于6月19日06时30分发布海上风险黄色预警信息。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-816CC9019028）\n\n2. 已解除变化\n- 解除-海上风险预警信息(2026年第25期)-黄色：山东省气象台于2026年7月14日16时解除台风黄色预警和海上大风黄色预警，台风“巴威”已减弱并远离，风力减弱。山东省海上搜救中心于16时30分解除预警。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-E74467FF16C4）\n- 解除-海上风险预警信息(2026年第22期)-黄色：山东省气象台于2026年6月20日06时解除海上大风黄色预警，黄海北部和中部风力已明显减弱，预计20日白天黄海中部和北部北风6级阵风7-8级减弱到5-6级，渤海和渤海海峡北风5-6级。山东省海上搜救中心于2026年6月20日06时30分解除第22期海上风险黄色预警信息。｜地域：黄海相关海域｜与青岛港关系：可能影响青岛进出港航线，需结合具体航线核对｜证据已逐字定位｜待真人核验（document_id: DOC-BAFD33B84451）\n- 解除-海上风险预警信息(2026年第21期)-黄色：山东省气象台于2026年6月15日06时00分解除海上大雾黄色预警，各预报海区能见度明显好转；山东省海上搜救中心于2026年6月15日06时20分解除2026年第21期海上风险黄色预警信息。｜地域：山东全省｜与青岛港关系：省级背景，是否影响青岛港需另行核对｜证据已逐字定位｜待真人核验（document_id: DOC-5EDAF376FA28）\n\n3. 对比限制\n- 问题未给出两个明确起止日期时，系统不计算虚假的环比数量；请补充周期后再做严格对比。",
+      "citation_count": 8,
+      "citations": [
+        {
+          "document_id": "DOC-2552CC83E784",
+          "title": "山东海事局六维发力护航青岛建设世界一流国际航运中心",
+          "quote": "青岛国际航运中心排名跃升至全球第12位，超越休斯顿，蝉联北方港口群之首",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-A688BF1982FC",
+          "title": "海船开航“一件事”全国实施 山东完成首日首单业务办理",
+          "quote": "2026年7月1日，海船开航 “一件事” 在全国实施，“海事通”端专属模块正式上线。",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于2026年7月14日16时解除台风黄色预警和海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月20日06时解除海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "quote": "山东省气象台于2026年6月19日06时00分发布海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "quote": "山东省气象台于7月11日11时30分发布台风黄色、海上大风黄色预警",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "quote": "山东省气象台于2026年6月15日06时00分解除海上大雾黄色预警：目前，我省各预报海区能见度已明显好转。",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        },
+        {
+          "document_id": "DOC-9B14EEC99041",
+          "title": "《“十五五”威海市海上搜寻救助能力建设规划》正式发布",
+          "quote": "《规划》系统谋划了2026年至2030年全市海上搜寻救助能力建设的蓝图",
+          "evidence_verified": true,
+          "verification_status": "已验证"
+        }
+      ],
+      "event_metadata": [
+        {
+          "document_id": "DOC-2552CC83E784",
+          "title": "山东海事局六维发力护航青岛建设世界一流国际航运中心",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "青岛港及山东沿海港口",
+          "evidence_verified": 1,
+          "geography_level": 1,
+          "geography_scope": "青岛港和青岛辖区",
+          "qingdao_relation": "直接涉及青岛港或青岛辖区",
+          "impact_relation": "直接影响"
+        },
+        {
+          "document_id": "DOC-5EDAF376FA28",
+          "title": "解除-海上风险预警信息(2026年第21期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "山东省各预报海区",
+          "evidence_verified": 1,
+          "geography_level": 3,
+          "geography_scope": "山东全省",
+          "qingdao_relation": "省级背景，是否影响青岛港需另行核对",
+          "impact_relation": "补充背景"
+        },
+        {
+          "document_id": "DOC-816CC9019028",
+          "title": "山东-海上风险预警信息(2026年第22期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "黄海中部、黄海北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-9B14EEC99041",
+          "title": "《“十五五”威海市海上搜寻救助能力建设规划》正式发布",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "威海市",
+          "evidence_verified": 0,
+          "geography_level": 4,
+          "geography_scope": "其他山东城市",
+          "qingdao_relation": "未发现与青岛港业务链的明确直接关系",
+          "impact_relation": "背景信息"
+        },
+        {
+          "document_id": "DOC-A688BF1982FC",
+          "title": "海船开航“一件事”全国实施 山东完成首日首单业务办理",
+          "status": "新增",
+          "category": "政策监管",
+          "risk_level": "低",
+          "business_value": "中",
+          "affected_area": "山东辖区",
+          "evidence_verified": 1,
+          "geography_level": 3,
+          "geography_scope": "山东全省",
+          "qingdao_relation": "省级背景，是否影响青岛港需另行核对",
+          "impact_relation": "补充背景"
+        },
+        {
+          "document_id": "DOC-BAFD33B84451",
+          "title": "解除-海上风险预警信息(2026年第22期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海中部和北部、渤海、渤海海峡",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-E74467FF16C4",
+          "title": "解除-海上风险预警信息(2026年第25期)-黄色",
+          "status": "解除",
+          "category": "海上气象",
+          "risk_level": "低",
+          "business_value": "高",
+          "affected_area": "黄海北部、黄海中部、渤海海峡、渤海",
+          "evidence_verified": 1,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        },
+        {
+          "document_id": "DOC-F1599B15D0AA",
+          "title": "山东-海上风险预警信息(2026年第25期)-黄色",
+          "status": "新增",
+          "category": "海上气象",
+          "risk_level": "高",
+          "business_value": "高",
+          "affected_area": "山东省沿海、渤海、渤海海峡、黄海北部、黄海中部、半岛及内陆湖面",
+          "evidence_verified": 0,
+          "geography_level": 2,
+          "geography_scope": "黄海相关海域",
+          "qingdao_relation": "可能影响青岛进出港航线，需结合具体航线核对",
+          "impact_relation": "潜在航线影响"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "已解除事项不混入当前有效风险段": true,
+    "当前风险不含活动宣传": true,
+    "青岛问题不以其他山东城市为主": true,
+    "当前风险引用均逐字绑定": true,
+    "引用不从明显残句开始": true
+  },
+  "all_checks_passed": true
+}

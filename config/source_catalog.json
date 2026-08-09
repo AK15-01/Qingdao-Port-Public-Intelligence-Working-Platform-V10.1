@@ -1,0 +1,42 @@
+[
+  {
+    "source_name": "山东海事局",
+    "organization": "山东海事局",
+    "source_type": "政府/监管机构",
+    "category_hint": "航行警告",
+    "adapter_type": "shandong_maritime",
+    "commercial_reuse_status": "未明确"
+  },
+  {
+    "source_name": "青岛市海洋预报暨海洋预警信息发布平台",
+    "organization": "青岛市海洋主管部门",
+    "source_type": "政府/监管机构",
+    "category_hint": "海上气象",
+    "adapter_type": "qingdao_ocean",
+    "commercial_reuse_status": "未明确"
+  },
+  {
+    "source_name": "山东省港口集团",
+    "organization": "山东省港口集团",
+    "source_type": "港口/企业官网",
+    "category_hint": "企业动态",
+    "adapter_type": "generic_html",
+    "commercial_reuse_status": "未明确"
+  },
+  {
+    "source_name": "青岛市政府及相关公开信息栏目",
+    "organization": "青岛市人民政府",
+    "source_type": "政府/监管机构",
+    "category_hint": "政策监管",
+    "adapter_type": "qingdao_government",
+    "commercial_reuse_status": "未明确"
+  },
+  {
+    "source_name": "上海航运交易所相关公开页面",
+    "organization": "上海航运交易所",
+    "source_type": "交易所/行业机构",
+    "category_hint": "航线运价",
+    "adapter_type": "generic_html",
+    "commercial_reuse_status": "需取得许可"
+  }
+]

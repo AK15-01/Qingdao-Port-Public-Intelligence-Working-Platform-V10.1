@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-07-23",
+  "review_interval_days": 365,
+  "scope_note": "工程侧公开证据记录，不构成法律意见或商业再利用授权。客户交付前仍需经营主体法务复核。",
+  "sources": [
+    {
+      "domain": "sd.msa.gov.cn",
+      "source_name": "山东海事局海上风险预警及政务动态",
+      "official_evidence_urls": [
+        "https://www.sd.msa.gov.cn/col/col5301/index.html",
+        "https://www.sd.msa.gov.cn/col/col1443/index.html"
+      ],
+      "robots_status": "允许",
+      "terms_status": "许可待确认",
+      "commercial_reuse_status": "未明确",
+      "report_use_allowed": false,
+      "evidence_summary": "官方栏目可公开访问并已通过低频技术验收，但未在栏目页发现明确的商业再利用授权。仅保留必要事实摘要、分析和原文链接，不转载全文。",
+      "next_action": "由经营主体向网站主办方或主管部门确认收费报告中的摘要引用和自动化访问边界，并保存书面证据。"
+    },
+    {
+      "domain": "sd-port.com",
+      "source_name": "山东省港口集团公开信息",
+      "official_evidence_urls": [
+        "https://www.sd-port.com/groupMainNews/index.html"
+      ],
+      "robots_status": "待复核",
+      "terms_status": "版权声明存在",
+      "commercial_reuse_status": "需取得许可",
+      "report_use_allowed": false,
+      "evidence_summary": "官网页脚标示山东省港口集团有限公司版权；列表中大量正文跳转微信，当前静态正文也不稳定。没有发现明确商业再利用授权。",
+      "next_action": "保持自动采集和客户报告关闭；如业务价值足够，由经营主体书面联系版权方确认。"
+    },
+    {
+      "domain": "qingdao.gov.cn",
+      "source_name": "青岛市政府及部门公开栏目",
+      "official_evidence_urls": [
+        "https://www.qingdao.gov.cn/"
+      ],
+      "robots_status": "连接未稳定验证",
+      "terms_status": "许可待确认",
+      "commercial_reuse_status": "未明确",
+      "report_use_allowed": false,
+      "evidence_summary": "不同部门页面可能包含转载内容及各自版权声明，不能把政府网站整体视为统一授权来源；本机还存在TLS或超时问题。",
+      "next_action": "逐栏目核对原始发布者、版权标识和转载来源，不采集第三方转载稿。"
+    }
+  ]
+}

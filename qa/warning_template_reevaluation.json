@@ -1,0 +1,143 @@
+{
+  "dry_run": true,
+  "source_id": "SRC-2FF28D3D7FC5",
+  "source_name": "山东海事局海上风险预警",
+  "evaluated_count": 11,
+  "still_quarantined": 0,
+  "eligible_for_manual_review": 11,
+  "note": "本脚本只重新计算质量结论，不修改文档、事件、审核、证据或报告资格。",
+  "documents": [
+    {
+      "document_id": "DOC-8174288F0237",
+      "title": "解除-海上风险预警信息(2026年第20期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/6/14/art_5301_1829753.html",
+      "old_similarity": 0.9521,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 5,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-ED583C517A54",
+      "title": "山东-海上风险预警信息(2026年第20期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/6/14/art_5301_1829752.html",
+      "old_similarity": 0.9465,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 7,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level、valid_time、weather_metric",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-FE921EAB9903",
+      "title": "解除-海上风险预警信息(2026年第19期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/6/4/art_5301_1829576.html",
+      "old_similarity": 0.9428,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 5,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-41360E6BC903",
+      "title": "山东-海上风险预警信息(2026年第19期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/6/1/art_5301_1829518.html",
+      "old_similarity": 0.9686,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 7,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level、valid_time、weather_metric",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-6286FDFD45E2",
+      "title": "解除-海上风险预警信息(2026年第18期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/5/28/art_5301_1829413.html",
+      "old_similarity": 0.9347,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 5,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-8B79AFF14338",
+      "title": "山东-海上风险预警信息(2026年第18期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/5/25/art_5301_1829412.html",
+      "old_similarity": 0.951,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 7,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level、valid_time、weather_metric",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-4AE13C69C511",
+      "title": "解除-海上风险预警信息(2026年第17期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/5/24/art_5301_1829252.html",
+      "old_similarity": 0.9636,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 5,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-9D194CC5FB08",
+      "title": "山东-海上风险预警信息(2026年第17期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/5/22/art_5301_1829192.html",
+      "old_similarity": 0.9241,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 7,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level、valid_time、weather_metric",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-914D2EC57B92",
+      "title": "解除-海上风险预警信息(2026年第15期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/5/17/art_5301_1829155.html",
+      "old_similarity": 0.9233,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 5,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-E9D7AF69EC5F",
+      "title": "山东-海上风险预警信息(2026年第15期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/5/11/art_5301_1828998.html",
+      "old_similarity": 0.9264,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 7,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level、valid_time、weather_metric",
+      "template_similarity_warning": 1
+    },
+    {
+      "document_id": "DOC-77DA0C80598B",
+      "title": "解除-海上风险预警信息(2026年第14期)-黄色",
+      "canonical_url": "https://www.sd.msa.gov.cn/art/2026/5/7/art_5301_1829154.html",
+      "old_similarity": 0.9296,
+      "new_status": "合格",
+      "processing_allowed": true,
+      "reason": "正文质量门禁通过",
+      "structured_fact_count": 5,
+      "structured_fact_fields": "area、issue_number、lifecycle、published_time、risk_level",
+      "template_similarity_warning": 1
+    }
+  ]
+}

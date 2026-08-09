@@ -1,0 +1,302 @@
+{
+  "metrics": {
+    "fixture_count": 32,
+    "title_accuracy": 1.0,
+    "date_accuracy": 1.0,
+    "source_accuracy": 1.0,
+    "body_quality_accuracy": 1.0,
+    "category_accuracy": 1.0,
+    "duplicate_accuracy": 1.0,
+    "report_block_accuracy": 1.0
+  },
+  "documents": [
+    {
+      "file": "normal_01.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "航行警告",
+      "category_actual": "航行警告",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_02.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "海上气象",
+      "category_actual": "海上气象",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_03.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "港口作业",
+      "category_actual": "港口作业",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_04.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "航线运价",
+      "category_actual": "航线运价",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_05.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "政策监管",
+      "category_actual": "政策监管",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_06.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "招标采购",
+      "category_actual": "招标采购",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_07.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_08.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "航行警告",
+      "category_actual": "航行警告",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_09.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "海上气象",
+      "category_actual": "海上气象",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_10.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "港口作业",
+      "category_actual": "港口作业",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_11.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "航线运价",
+      "category_actual": "航线运价",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "normal_12.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "政策监管",
+      "category_actual": "政策监管",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "government_01.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "政策监管",
+      "category_actual": "政策监管",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "government_02.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "招标采购",
+      "category_actual": "招标采购",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "government_03.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "government_04.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "航行警告",
+      "category_actual": "航行警告",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "noise_01.html",
+      "quality_status": "正文质量不足",
+      "quality_note": "导航菜单、重复栏目或页头页脚占比过高；标题为网站名称、首页或缺失",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "noise_02.html",
+      "quality_status": "正文质量不足",
+      "quality_note": "导航菜单、重复栏目或页头页脚占比过高；标题为网站名称、首页或缺失",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "noise_03.html",
+      "quality_status": "正文质量不足",
+      "quality_note": "导航菜单、重复栏目或页头页脚占比过高；标题为网站名称、首页或缺失",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "noise_04.html",
+      "quality_status": "正文质量不足",
+      "quality_note": "导航菜单、重复栏目或页头页脚占比过高；标题为网站名称、首页或缺失",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "mojibake_01.html",
+      "quality_status": "编码异常",
+      "quality_note": "标题或正文包含大量疑似错误编码字符",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "mojibake_02.html",
+      "quality_status": "编码异常",
+      "quality_note": "标题或正文包含大量疑似错误编码字符",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "mojibake_03.html",
+      "quality_status": "编码异常",
+      "quality_note": "标题或正文包含大量疑似错误编码字符",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "mojibake_04.html",
+      "quality_status": "编码异常",
+      "quality_note": "标题或正文包含大量疑似错误编码字符",
+      "category_expected": "企业动态",
+      "category_actual": "企业动态",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "no_date_01.html",
+      "quality_status": "报告门禁未通过",
+      "quality_note": "发布日期缺失或不可识别",
+      "category_expected": "政策监管",
+      "category_actual": "政策监管",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "no_date_02.html",
+      "quality_status": "报告门禁未通过",
+      "quality_note": "发布日期缺失或不可识别",
+      "category_expected": "政策监管",
+      "category_actual": "政策监管",
+      "report_blocked_expected": true,
+      "report_blocked_actual": true
+    },
+    {
+      "file": "duplicate_01.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "航行警告",
+      "category_actual": "航行警告",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "duplicate_02.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "航行警告",
+      "category_actual": "航行警告",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "updated_01.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "港口作业",
+      "category_actual": "港口作业",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "updated_02.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "港口作业",
+      "category_actual": "港口作业",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "resolved_01.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "航行警告",
+      "category_actual": "航行警告",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    },
+    {
+      "file": "resolved_02.html",
+      "quality_status": "合格",
+      "quality_note": "正文质量门禁通过",
+      "category_expected": "航行警告",
+      "category_actual": "航行警告",
+      "report_blocked_expected": false,
+      "report_blocked_actual": false
+    }
+  ]
+}

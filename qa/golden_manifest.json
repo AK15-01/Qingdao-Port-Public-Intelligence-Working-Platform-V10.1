@@ -1,0 +1,322 @@
+[
+  {
+    "file": "normal_01.html",
+    "title": "测试航行警告1",
+    "date": "2026-07-01",
+    "source": "黄金测试公开机构",
+    "category": "航行警告",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_01"
+  },
+  {
+    "file": "normal_02.html",
+    "title": "测试海洋天气预警2",
+    "date": "2026-07-02",
+    "source": "黄金测试公开机构",
+    "category": "海上气象",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_02"
+  },
+  {
+    "file": "normal_03.html",
+    "title": "测试港口作业安排3",
+    "date": "2026-07-03",
+    "source": "黄金测试公开机构",
+    "category": "港口作业",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_03"
+  },
+  {
+    "file": "normal_04.html",
+    "title": "测试航运指数变化4",
+    "date": "2026-07-04",
+    "source": "黄金测试公开机构",
+    "category": "航线运价",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_04"
+  },
+  {
+    "file": "normal_05.html",
+    "title": "测试交通监管通知5",
+    "date": "2026-07-05",
+    "source": "黄金测试公开机构",
+    "category": "政策监管",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_05"
+  },
+  {
+    "file": "normal_06.html",
+    "title": "测试数字化采购公告6",
+    "date": "2026-07-06",
+    "source": "黄金测试公开机构",
+    "category": "招标采购",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_06"
+  },
+  {
+    "file": "normal_07.html",
+    "title": "测试港航企业动态7",
+    "date": "2026-07-07",
+    "source": "黄金测试公开机构",
+    "category": "企业动态",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_07"
+  },
+  {
+    "file": "normal_08.html",
+    "title": "测试航行警告8",
+    "date": "2026-07-08",
+    "source": "黄金测试公开机构",
+    "category": "航行警告",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_08"
+  },
+  {
+    "file": "normal_09.html",
+    "title": "测试海洋天气预警9",
+    "date": "2026-07-09",
+    "source": "黄金测试公开机构",
+    "category": "海上气象",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_09"
+  },
+  {
+    "file": "normal_10.html",
+    "title": "测试港口作业安排10",
+    "date": "2026-07-10",
+    "source": "黄金测试公开机构",
+    "category": "港口作业",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_10"
+  },
+  {
+    "file": "normal_11.html",
+    "title": "测试航运指数变化11",
+    "date": "2026-07-11",
+    "source": "黄金测试公开机构",
+    "category": "航线运价",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_11"
+  },
+  {
+    "file": "normal_12.html",
+    "title": "测试交通监管通知12",
+    "date": "2026-07-12",
+    "source": "黄金测试公开机构",
+    "category": "政策监管",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "normal_12"
+  },
+  {
+    "file": "government_01.html",
+    "title": "关于开展测试交通监管通知工作的公开通知",
+    "date": "2026-07-13",
+    "source": "黄金测试政府部门",
+    "category": "政策监管",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "government_01"
+  },
+  {
+    "file": "government_02.html",
+    "title": "关于开展测试数字化采购公告工作的公开通知",
+    "date": "2026-07-14",
+    "source": "黄金测试政府部门",
+    "category": "招标采购",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "government_02"
+  },
+  {
+    "file": "government_03.html",
+    "title": "关于开展测试港航企业动态工作的公开通知",
+    "date": "2026-07-15",
+    "source": "黄金测试政府部门",
+    "category": "企业动态",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "government_03"
+  },
+  {
+    "file": "government_04.html",
+    "title": "关于开展测试航行警告工作的公开通知",
+    "date": "2026-07-16",
+    "source": "黄金测试政府部门",
+    "category": "航行警告",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "government_04"
+  },
+  {
+    "file": "noise_01.html",
+    "title": "网站首页",
+    "date": "2026-07-17",
+    "source": "黄金测试网站",
+    "category": "企业动态",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "noise_01"
+  },
+  {
+    "file": "noise_02.html",
+    "title": "黄金测试网站",
+    "date": "2026-07-18",
+    "source": "黄金测试网站",
+    "category": "企业动态",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "noise_02"
+  },
+  {
+    "file": "noise_03.html",
+    "title": "黄金测试网站",
+    "date": "2026-07-19",
+    "source": "黄金测试网站",
+    "category": "企业动态",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "noise_03"
+  },
+  {
+    "file": "noise_04.html",
+    "title": "黄金测试网站",
+    "date": "2026-07-20",
+    "source": "黄金测试网站",
+    "category": "企业动态",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "noise_04"
+  },
+  {
+    "file": "mojibake_01.html",
+    "title": "å±±ä¸æ¸¯å£å¬å¼ä¿¡æ¯ Ã¥Â±Â± Ã¦Â¸Â¯ � �",
+    "date": "2026-07-21",
+    "source": "黄金测试公开机构",
+    "category": "企业动态",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "mojibake_01"
+  },
+  {
+    "file": "mojibake_02.html",
+    "title": "å±±ä¸æ¸¯å£å¬å¼ä¿¡æ¯ Ã¥Â±Â± Ã¦Â¸Â¯ � �",
+    "date": "2026-07-22",
+    "source": "黄金测试公开机构",
+    "category": "企业动态",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "mojibake_02"
+  },
+  {
+    "file": "mojibake_03.html",
+    "title": "å±±ä¸æ¸¯å£å¬å¼ä¿¡æ¯ Ã¥Â±Â± Ã¦Â¸Â¯ � �",
+    "date": "2026-07-23",
+    "source": "黄金测试公开机构",
+    "category": "企业动态",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "mojibake_03"
+  },
+  {
+    "file": "mojibake_04.html",
+    "title": "å±±ä¸æ¸¯å£å¬å¼ä¿¡æ¯ Ã¥Â±Â± Ã¦Â¸Â¯ � �",
+    "date": "2026-07-24",
+    "source": "黄金测试公开机构",
+    "category": "企业动态",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "mojibake_04"
+  },
+  {
+    "file": "no_date_01.html",
+    "title": "无日期公开测试通知1",
+    "date": "",
+    "source": "黄金测试公开机构",
+    "category": "政策监管",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "no_date_01"
+  },
+  {
+    "file": "no_date_02.html",
+    "title": "无日期公开测试通知2",
+    "date": "",
+    "source": "黄金测试公开机构",
+    "category": "政策监管",
+    "report_blocked": true,
+    "duplicate_group": "",
+    "canonical_group": "no_date_02"
+  },
+  {
+    "file": "duplicate_01.html",
+    "title": "重复航行提示测试",
+    "date": "2026-07-25",
+    "source": "黄金测试海事机构",
+    "category": "航行警告",
+    "report_blocked": false,
+    "duplicate_group": "DUP-1",
+    "canonical_group": "duplicate_01"
+  },
+  {
+    "file": "duplicate_02.html",
+    "title": "重复航行提示测试",
+    "date": "2026-07-25",
+    "source": "黄金测试海事机构",
+    "category": "航行警告",
+    "report_blocked": false,
+    "duplicate_group": "DUP-1",
+    "canonical_group": "duplicate_02"
+  },
+  {
+    "file": "updated_01.html",
+    "title": "测试作业安排更新前",
+    "date": "2026-07-26",
+    "source": "黄金测试港口机构",
+    "category": "港口作业",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "UPDATE-1"
+  },
+  {
+    "file": "updated_02.html",
+    "title": "测试作业安排更新后",
+    "date": "2026-07-26",
+    "source": "黄金测试港口机构",
+    "category": "港口作业",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "UPDATE-1"
+  },
+  {
+    "file": "resolved_01.html",
+    "title": "解除测试航行风险预警1",
+    "date": "2026-07-27",
+    "source": "黄金测试海事机构",
+    "category": "航行警告",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "resolved_01"
+  },
+  {
+    "file": "resolved_02.html",
+    "title": "解除测试航行风险预警2",
+    "date": "2026-07-28",
+    "source": "黄金测试海事机构",
+    "category": "航行警告",
+    "report_blocked": false,
+    "duplicate_group": "",
+    "canonical_group": "resolved_02"
+  }
+]
