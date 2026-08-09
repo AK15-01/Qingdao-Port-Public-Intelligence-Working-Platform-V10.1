@@ -106,7 +106,7 @@ def test_public_demo_home_is_read_only_and_hides_dangerous_actions(monkeypatch):
     _public_environment(monkeypatch)
     app = AppTest.from_file(str(PROJECT_ROOT / "app.py"), default_timeout=30).run()
     assert not app.exception
-    assert any("公开信息智能监测与行业情报分析平台" in title.value for title in app.title)
+    assert any("港航公开信息监测与分析平台" in title.value for title in app.title)
     assert any("只读演示" in caption.value for caption in app.caption)
     labels = {button.label for button in app.button}
     assert not {

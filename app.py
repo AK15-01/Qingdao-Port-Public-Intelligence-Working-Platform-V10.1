@@ -95,9 +95,9 @@ LOGGER = logging.getLogger("portscope.public_demo")
 
 st.set_page_config(
     page_title=(
-        "公开信息智能监测与行业情报分析平台"
+        "港航公开信息监测与分析平台"
         if PUBLIC_DEMO_MODE
-        else "PortScope 青岛港情报试验台"
+        else "PortScope｜港航公开信息监测与分析平台"
     ),
     page_icon="⚓",
     layout="wide",
@@ -837,7 +837,7 @@ if active_workspace is None:
     # immediately sees the three-step AI/API/source/command onboarding flow.
     active_workspace = create_workspace(
         {
-            "workspace_name": "青岛港公开情报工作空间",
+            "workspace_name": "青岛港公开信息监测工作空间",
             "industry": "港口物流与外贸",
             "region": "青岛",
             "default_report_title": "青岛港公开信息情报周报",
@@ -866,8 +866,8 @@ quality_report = validate_events(raw_events)
 source_records = load_sources(active_paths.sources)
 intake_records = load_intakes(active_paths.intakes)
 
-st.title("⚓ PortScope｜青岛港公开情报工作台")
-st.caption(f"当前工作空间：{active_workspace['workspace_name']}｜公开信息采集、人工核验与情报简报")
+st.title("⚓ PortScope｜港航公开信息监测与分析平台")
+st.caption("青岛港 / 山东港航公开数据试验场景｜公开信息采集、监测、核验与分析")
 
 with st.sidebar:
     st.header("工作空间")

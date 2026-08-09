@@ -201,9 +201,9 @@ def render_public_demo_app(version: str) -> None:
     config = load_runtime_config()
     repository = PublicDemoRepository(config.demo_database_path)
 
-    st.title("公开信息智能监测与行业情报分析平台")
+    st.title("港航公开信息监测与分析平台")
     st.caption("Public Intelligence Monitoring & Industry Insight Platform")
-    st.markdown("**港航行业 Demo · 青岛港公开信息监测案例**")
+    st.markdown("**青岛港 / 山东港航公开数据试验场景**")
 
     with st.sidebar:
         st.success("公网只读 Demo")
