@@ -140,7 +140,13 @@ def direct_runtime_imports(project_root: Path) -> dict[str, str]:
 def audit_runtime_dependencies(
     project_root: Path = PROJECT_ROOT,
 ) -> list[DependencyAuditRow]:
+    # 依赖声明分布在两个文件：requirements.txt 是最小运行集合，
+    # requirements-rag.txt 是可选的本地向量栈。两者都算「已声明」，
+    # 否则把向量栈拆出去之后会被误报为缺失依赖。
     requirements = declared_packages(project_root / "requirements.txt")
+    optional_path = project_root / "requirements-rag.txt"
+    if optional_path.is_file():
+        requirements |= declared_packages(optional_path)
     rows: list[DependencyAuditRow] = []
     for module, usage in sorted(direct_runtime_imports(project_root).items()):
         package = PACKAGE_BY_MODULE.get(module, module.replace("_", "-"))
@@ -156,7 +162,7 @@ def audit_runtime_dependencies(
                 action=(
                     "已声明，保持现状"
                     if declared
-                    else "必须补充到requirements.txt"
+                    else "必须补充到requirements.txt或requirements-rag.txt"
                 ),
             )
         )

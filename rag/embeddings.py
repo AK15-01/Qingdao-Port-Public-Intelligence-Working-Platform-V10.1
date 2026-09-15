@@ -36,7 +36,7 @@ class LocalBGEEmbedding:
             from sentence_transformers import SentenceTransformer
         except ImportError as exc:
             raise EmbeddingUnavailable(
-                "尚未安装 sentence-transformers；关键词检索仍可用。安装依赖后首次索引会提示下载 BAAI/bge-small-zh-v1.5。"
+                "尚未安装 sentence-transformers（pip install -r requirements-rag.txt）；关键词检索仍可用。安装依赖后首次索引会提示下载 BAAI/bge-small-zh-v1.5。"
             ) from exc
         # Prefer an already downloaded model without performing remote HEAD
         # requests. If it is not cached, fall back to the normal first-run

@@ -1,0 +1,17 @@
+# 可选：本地语义向量检索栈。
+#
+# 不安装也能用：rag/ 对这两个包做函数内惰性导入，缺失时 Chunk 保持「待向量化」，
+# SQLite FTS5 关键词检索照常工作，全部 pytest 用例也照常通过。
+#
+# 安装后首次索引会下载 BAAI/bge-small-zh-v1.5；Embedding 在本地生成，
+# 正文不会为了向量化发送给 DeepSeek。
+#
+#   pip install -r requirements-rag.txt
+#
+# 注意：sentence-transformers 会带入 torch（约 2GB）。公网 Demo 与 CI 都不安装它，
+# 也不应把本文件加进 Streamlit Community Cloud 的依赖。
+
+-r requirements.txt
+
+chromadb>=0.5,<2.0
+sentence-transformers>=3.0,<6.0

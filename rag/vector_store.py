@@ -21,7 +21,7 @@ class ChromaVectorStore:
         try:
             import chromadb
         except ImportError as exc:
-            raise VectorStoreUnavailable("尚未安装 chromadb；SQLite FTS5 关键词检索仍可用。") from exc
+            raise VectorStoreUnavailable("尚未安装 chromadb（pip install -r requirements-rag.txt）；SQLite FTS5 关键词检索仍可用。") from exc
         self.persist_path.mkdir(parents=True, exist_ok=True)
         self._client = chromadb.PersistentClient(path=str(self.persist_path))
         self._collection = self._client.get_or_create_collection(name=self.collection_name, metadata={"hnsw:space": "cosine"})
@@ -53,7 +53,7 @@ class ChromaVectorStore:
         return int(self._get_collection().count())
 
     def reset(self) -> None:
-        collection = self._get_collection()
+        self._get_collection()
         if self._client is not None:
             self._client.delete_collection(self.collection_name)
         self._collection = None

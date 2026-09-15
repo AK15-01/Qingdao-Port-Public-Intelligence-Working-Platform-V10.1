@@ -1,3 +1,15 @@
+# 运行 PortScope 所需的最小依赖集合。
+#
+# 这份清单刻意不包含本地向量栈（chromadb、sentence-transformers 及其依赖 torch，
+# 合计约 2GB）。原因有两条：
+#   1. rag/embeddings.py 与 rag/vector_store.py 对两者做函数内惰性导入，缺失时
+#      SQLite FTS5 关键词检索、全部 pytest 用例和公网 Demo 都可以正常运行；
+#   2. Streamlit Community Cloud 只读取仓库根目录的 requirements.txt，且资源上限
+#      约 1GB，把 torch 放进来会直接导致构建失败。
+#
+# 需要语义向量检索时，额外安装：pip install -r requirements-rag.txt
+# 桌面完整版由 setup_environment.bat 按 requirements-lock.txt 安装，不受本文件影响。
+
 # Runtime
 streamlit>=1.36,<2.0
 pandas>=2.2,<3.0
@@ -6,11 +18,13 @@ beautifulsoup4>=4.12,<5.0
 python-docx>=1.1,<2.0
 pydantic>=2.7,<3.0
 python-dotenv>=1.0,<2.0
-pypdf>=6.0,<7.0
+# pypdf 固定到 requirements-lock.txt 中已验证的版本：不同小版本的文本抽取结果
+# 会改变正文质量门禁的判定理由（实测 6.18.1 会把乱码 PDF 判成「信息密度过低」
+# 而非「编码异常」）。tests/test_pdf_quality_and_value.py 对该理由有断言，
+# 因此这里必须与锁定版本一致，不能放宽为区间。
+pypdf==6.14.2
 openpyxl>=3.1,<4.0
 lxml>=5.0,<7.0
-chromadb>=0.5,<2.0
-sentence-transformers>=3.0,<6.0
 
 # Test
 pytest>=8.0,<9.0

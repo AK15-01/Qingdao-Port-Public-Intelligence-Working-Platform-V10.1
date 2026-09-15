@@ -8,7 +8,6 @@ from document_chunker import build_chunk_rows, chunk_text
 from document_processor import store_document
 from event_pipeline import batch_confirm_events, create_event_for_document
 from platform_db import connect, initialize_database, upsert_source
-from rag.context_builder import build_context
 from rag.hybrid_retriever import HybridRetriever
 from rag.keyword_search import KeywordSearcher
 from rag.rag_service import NO_EVIDENCE, RAGService
@@ -227,6 +226,9 @@ def test_deepseek_rag_answerer_validates_ids():
 
 
 def test_chroma_persists_locally_and_document_delete_replaces_old_index(tmp_path: Path):
+    # 本用例的被测对象就是 Chroma 本身。chromadb 属于可选向量栈
+    # （requirements-rag.txt），未安装时 FTS5 回退路径由其他用例覆盖。
+    pytest.importorskip("chromadb", reason="可选向量栈未安装：pip install -r requirements-rag.txt")
     path = tmp_path / "chroma"
     first = ChromaVectorStore(path, "test_documents")
     first.upsert(["CHK-1"], ["公开限航测试"], [[1.0, 0.0]], [{"workspace_id": "WS-1", "document_id": "DOC-1"}])
