@@ -8,7 +8,6 @@ from pathlib import Path
 import re
 from typing import Mapping, Optional, Sequence, Union
 from urllib.parse import urlparse
-from uuid import uuid4
 from zipfile import ZIP_DEFLATED, ZipFile
 import xml.etree.ElementTree as ET
 
@@ -577,7 +576,6 @@ def _build_docx(
     version: int,
 ) -> None:
     from docx import Document
-    from docx.enum.section import WD_SECTION_START
     from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
     from docx.enum.text import WD_ALIGN_PARAGRAPH
     from docx.oxml.ns import qn

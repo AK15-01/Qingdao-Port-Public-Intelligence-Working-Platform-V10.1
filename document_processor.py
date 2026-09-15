@@ -4,7 +4,6 @@ from dataclasses import dataclass
 from datetime import datetime
 import difflib
 import hashlib
-import json
 from pathlib import Path
 from typing import Mapping, Sequence
 

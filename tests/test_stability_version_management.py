@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from datetime import datetime, timedelta
-import json
 from pathlib import Path
 
 import pytest
@@ -9,7 +8,6 @@ import pytest
 from document_processor import store_document
 from operation_store import (
     add_technical_log,
-    claim_operation,
     close_operation,
     create_operation,
     finish_operation,
@@ -20,12 +18,11 @@ from operation_store import (
     retry_operation,
     start_operation,
 )
-from platform_db import connect, initialize_database, now_iso, upsert_source
+from platform_db import connect, initialize_database, now_iso
 from package_release import should_include
 from scripts.cleanup_artifacts import plan_cleanup
 from state_audit import (
     audit_snapshot_is_stale,
-    collect_state_audit,
     write_state_audit,
 )
 from task_runtime import enqueue_background_task, read_task_log

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Callable, Optional, Type
+from typing import Callable, Type
 
 from pydantic import BaseModel
 

@@ -1,13 +1,13 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Mapping, Optional
 
 import requests
 from pydantic import ValidationError
 
-from workspace_store import WorkspacePaths, workspace_paths
+from workspace_store import WorkspacePaths
 
 from .approval import request_approval
 from .tool_registry import ToolRegistry, build_default_registry

@@ -3,7 +3,6 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
-from typing import Optional
 from urllib.parse import urlparse
 
 from document_chunker import build_chunk_rows

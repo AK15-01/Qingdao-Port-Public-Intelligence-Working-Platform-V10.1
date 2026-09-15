@@ -30,7 +30,6 @@ from risk_engine import calculate_scores
 from qa.evaluate_real_acceptance import (
     calculate_human_metrics,
     collect_records,
-    evaluate,
     read_labels_xlsx,
 )
 from rag.embeddings import LocalBGEEmbedding

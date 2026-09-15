@@ -15,7 +15,7 @@ from commercial_readiness import (
     preflight_customer_report,
 )
 from event_pipeline import batch_confirm_events
-from deepseek_service import build_rag_answerer, load_settings, mask_api_key, test_deepseek_connection
+from deepseek_service import build_rag_answerer, load_settings
 from document_processor import summarize_changes
 from platform_db import (
     connect,
@@ -35,7 +35,7 @@ from rag.keyword_search import KeywordSearcher
 from rag.rag_service import RAGService
 from source_health import validate_enabled_sources
 from rag.vector_store import ChromaVectorStore
-from workspace_store import load_clients, log_action, update_workspace
+from workspace_store import load_clients, log_action
 from ui_agent import render_ai_configuration
 from ui_daily import ui_session_id
 from task_runtime import enqueue_background_task

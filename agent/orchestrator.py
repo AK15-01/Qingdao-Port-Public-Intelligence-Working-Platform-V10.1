@@ -5,7 +5,7 @@ from datetime import date, timedelta
 import json
 import re
 import time
-from typing import Mapping, Optional
+from typing import Mapping
 
 import requests
 from pydantic import ValidationError

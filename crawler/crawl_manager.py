@@ -9,7 +9,7 @@ import time
 from typing import Callable, Mapping, Optional
 
 from document_chunker import build_chunk_rows
-from document_processor import StoredDocument, store_document
+from document_processor import store_document
 from document_quality import assess_document
 from event_pipeline import create_event_for_document
 from operation_store import (
@@ -18,7 +18,7 @@ from operation_store import (
     start_operation,
     update_operation_progress,
 )
-from pdf_processor import find_pdf_links, pdf_filename_hint
+from pdf_processor import find_pdf_links
 from platform_db import connect, initialize_database, list_sources, new_id, now_iso, transaction
 
 from .base_adapter import DiscoveredItem

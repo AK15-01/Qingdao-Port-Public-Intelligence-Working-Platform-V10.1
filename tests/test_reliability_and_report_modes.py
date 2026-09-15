@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-import socket
 from zipfile import ZipFile
 import xml.etree.ElementTree as ET
 

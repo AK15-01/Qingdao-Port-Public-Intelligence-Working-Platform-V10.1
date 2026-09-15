@@ -6,8 +6,7 @@ from crawler.crawl_manager import CancelToken, CrawlManager
 from crawler.generic_list_adapter import GenericListAdapter
 from crawler.site_adapter import build_adapter
 from crawler.robots_checker import RobotsChecker, RobotsDecision
-from document_processor import store_document
-from platform_db import connect, initialize_database, initialize_recommended_sources, list_sources, table_counts, upsert_source
+from platform_db import connect, initialize_database, initialize_recommended_sources, table_counts, upsert_source
 from workspace_store import create_workspace
 
 

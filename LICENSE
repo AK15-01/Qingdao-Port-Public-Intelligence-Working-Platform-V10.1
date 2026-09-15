@@ -1,0 +1,45 @@
+PortScope — Source-Available License / 源码可见许可
+Copyright (c) 2026 PortScope project owner. All rights reserved.
+
+中文
+----
+本仓库以“源码可见”方式公开，用于技术评估、学习参考和作品展示。
+
+允许：
+  1. 查看、阅读源码；
+  2. 为评估目的在本地克隆并运行；
+  3. 在注明出处的前提下引用不超过 30 行的代码片段。
+
+未经著作权人书面许可，不得：
+  1. 将本软件或其衍生作品用于商业用途；
+  2. 再分发、转售、托管为对外服务，或并入其他产品；
+  3. 移除本许可证、版权声明或 THIRD_PARTY_LICENSES.md。
+
+本软件按“现状”提供，不含任何明示或默示担保。著作权人不对使用本软件
+产生的任何损失承担责任。
+
+本软件不是青岛港、海事、气象、政府或任何交易机构的官方系统。其风险与
+商机评分仅用于公开信息排序，不构成预测、法律意见、投资意见或操作指令。
+本许可证只覆盖本仓库的代码，不授予任何第三方公开来源内容的再利用权利；
+第三方来源的许可边界见 config/source_license_evidence.json 与
+THIRD_PARTY_LICENSES.md。
+
+English
+-------
+This repository is published as source-available for technical evaluation,
+study and portfolio review.
+
+Permitted: reading the source; cloning and running it locally for evaluation;
+quoting snippets of up to 30 lines with attribution.
+
+Not permitted without the copyright holder's written consent: commercial use;
+redistribution, resale, hosting as a service, or incorporation into another
+product; removal of this license or the copyright and third-party notices.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. THE COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
+
+This license covers this repository's own code only. It grants no rights to
+any third-party public-source content; see config/source_license_evidence.json
+and THIRD_PARTY_LICENSES.md for those boundaries.

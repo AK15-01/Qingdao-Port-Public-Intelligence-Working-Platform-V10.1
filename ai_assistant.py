@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 import json
 from pathlib import Path
 import re
-from typing import Mapping, Optional
+from typing import Optional
 
 import requests
 from dotenv import dotenv_values

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime
 import re
-from typing import Callable, Mapping, Optional
+from typing import Callable, Mapping
 from urllib.parse import urljoin, urlparse, urlunparse
 
 from bs4 import BeautifulSoup

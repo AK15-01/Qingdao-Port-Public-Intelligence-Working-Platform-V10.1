@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 from datetime import datetime
 from pathlib import Path
-import shutil
 import sqlite3
 
 from evidence_repair import write_evidence_repair_report

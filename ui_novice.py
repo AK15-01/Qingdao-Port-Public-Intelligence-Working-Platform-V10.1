@@ -201,7 +201,7 @@ def render_first_launch_wizard(
         submitted = st.form_submit_button("创建工作空间并开始第一条采集", type="primary")
     if submitted:
         try:
-            workspace = create_workspace(
+            create_workspace(
                 {
                     "workspace_name": workspace_name,
                     "industry": industry,

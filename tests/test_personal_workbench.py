@@ -14,7 +14,6 @@ from evidence_binding import (
     suggest_evidence_candidates,
 )
 from backup_workspace import backup_workspace, restore_database_snapshot, sanitize_backup_archive
-from evidence_repair import list_evidence_issues
 from operation_store import (
     clear_home_operations,
     close_operation,

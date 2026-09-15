@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from collections import defaultdict
-from difflib import SequenceMatcher
 import json
 from pathlib import Path
 import re

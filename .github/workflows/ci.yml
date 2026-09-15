@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    # 桌面完整版以 Windows 为准：启动器、批处理与路径行为都只在 Windows 上有意义。
+    name: 全量测试 (Windows · Python 3.11)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: pytest
+        # 用例全部使用 Mock/fixture，不访问任何官方站点，也不调用 DeepSeek。
+        run: python -m pytest -q
+
+  lint:
+    name: 静态检查 (ruff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install "ruff>=0.14,<1.0"
+      - name: 阻断集合（真实缺陷类规则）
+        run: ruff check .
+      - name: 风格报告（不阻断）
+        run: ruff check --select E5,E7,I,UP,B,SIM --statistics --exit-zero .
+
+  public-demo:
+    # 公网 Demo 跑在 Linux（Streamlit Community Cloud / Render），与桌面版不是同一条路径，
+    # 因此单独验证：只读演示库、无密钥、无采集入口。
+    name: 公网 Demo 部署路径 (Linux · Python 3.11)
+    runs-on: ubuntu-latest
+    env:
+      PUBLIC_DEMO_MODE: "true"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: 部署自检
+        run: python deployment_check.py
+      - name: 公网安全扫描
+        run: python scripts/scan_public_demo_safety.py
+      - name: 密钥泄漏审计
+        run: python security_audit.py
+      - name: Demo 只读约束用例
+        run: python -m pytest -q tests/test_public_demo_deployment.py

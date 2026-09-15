@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import ctypes
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 import importlib
 import importlib.metadata
 import json

@@ -5,7 +5,6 @@ from io import BytesIO
 from pathlib import Path
 import re
 
-from bs4 import BeautifulSoup
 import pandas as pd
 
 from web_extractor import extract_html

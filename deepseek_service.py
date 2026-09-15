@@ -9,7 +9,7 @@ import re
 import socket
 import tempfile
 import time
-from typing import Callable, Literal, Optional, Sequence
+from typing import Literal, Optional, Sequence
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 import requests
@@ -508,7 +508,7 @@ def test_deepseek_connection(
                 save_model_cache(models, cache_path)
         except requests.RequestException as exc:
             return _request_error_result(settings, "模型列表", endpoint, started, exc)
-        except (KeyError, TypeError, ValueError, json.JSONDecodeError) as exc:
+        except (KeyError, TypeError, ValueError, json.JSONDecodeError):
             return _failed_connection(settings=settings, stage="模型列表", endpoint=endpoint, started=started,
                                       error_type="invalid_response", safe_message="响应JSON格式异常")
 

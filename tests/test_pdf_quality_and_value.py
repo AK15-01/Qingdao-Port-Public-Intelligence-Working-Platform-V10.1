@@ -5,7 +5,7 @@ from pathlib import Path
 import socket
 
 import pytest
-from pypdf import PdfReader, PdfWriter
+from pypdf import PdfWriter
 from pypdf.generic import DecodedStreamObject, DictionaryObject, NameObject
 
 from business_value import classify_business_value

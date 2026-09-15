@@ -1,6 +1,5 @@
 from pathlib import Path
 
-import pandas as pd
 import pytest
 
 from commercial_report import generate_commercial_report

@@ -22,7 +22,6 @@ from data_store import (
     ALLOWED_CATEGORIES,
     ALLOWED_STATUSES,
     STANDARD_FIELDS,
-    load_events,
     update_event,
 )
 from data_validator import validate_events

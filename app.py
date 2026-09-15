@@ -34,7 +34,7 @@ from ui_collection import (
     render_source_management,
     render_today_dashboard,
 )
-from ui_novice import render_first_launch_wizard, render_novice_workbench
+from ui_novice import render_novice_workbench
 from ui_product import (
     render_clients_and_reports,
     render_current_outcomes,
@@ -54,12 +54,10 @@ from workspace_store import (
 from ui_agent import render_agent_settings, render_ai_workbench, render_tasks_and_reports
 from platform_db import (
     initialize_database as initialize_platform_database,
-    list_sources as list_platform_sources,
 )
 from security_audit import release_env_warning
 from operation_store import recover_stale_operations
 from ui_platform import (
-    CORE_PAGES,
     render_home as render_platform_home,
     render_professional_settings,
     render_qa as render_platform_qa,

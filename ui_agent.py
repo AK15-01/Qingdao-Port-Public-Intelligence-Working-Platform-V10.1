@@ -1,8 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import asdict
-from datetime import date, datetime
-import os
 from pathlib import Path
 from typing import Mapping
 
@@ -12,12 +10,12 @@ from agent import AgentContext, AgentOrchestrator, ToolExecutor, build_default_r
 from agent.approval import list_pending_approvals
 from agent.conversation_store import get_or_create_conversation, load_messages
 from deepseek_service import (
-    MODEL_ALIASES, DeepSeekSettings, clear_local_api_key, load_model_cache, load_settings, mask_api_key,
+    DeepSeekSettings, clear_local_api_key, load_model_cache, load_settings, mask_api_key,
     save_settings_to_env, settings_env_path, test_deepseek_connection,
 )
 from file_intake import UnsupportedFileType, parse_uploaded_public_file
 from platform_db import connect, initialize_recommended_sources, list_sources, table_counts
-from workspace_store import load_reports, update_workspace, workspace_paths
+from workspace_store import load_reports, update_workspace
 
 
 RECOMMENDED_COMMANDS = [

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import date, timedelta
 from pathlib import Path
-from typing import Mapping, Optional
+from typing import Mapping
 
 import pandas as pd
 import streamlit as st

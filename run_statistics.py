@@ -64,7 +64,6 @@ def source_run_statistics(
         item = dict(raw)
         run_count = int(item["run_count"] or 0)
         fetched = int(item["fetched_count"] or 0)
-        documents = int(item["document_count"] or 0)
         qualified = int(item["qualified_document_count"] or 0)
         item.update(
             {

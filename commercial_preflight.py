@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
-from datetime import date, timedelta
 from importlib import metadata
 import argparse
 import json

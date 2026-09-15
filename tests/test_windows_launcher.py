@@ -18,6 +18,7 @@ from scripts.launch_portscope import (
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_PYTHON = PROJECT_ROOT / ".venv" / "Scripts" / "python.exe"
 
 
 def _daily_launch_text() -> str:
@@ -81,6 +82,10 @@ def test_project_python_identity_is_path_based_not_current_working_directory():
 
 
 @pytest.mark.skipif(os.name != "nt", reason="Windows batch integration test")
+@pytest.mark.skipif(
+    not PROJECT_PYTHON.is_file(),
+    reason="需要已配置的项目 .venv：先运行 setup_environment.bat，本集成用例才有可断言的对象",
+)
 def test_check_only_from_unrelated_directory_uses_project_venv_offline(tmp_path: Path):
     unrelated = tmp_path / "错误 工作目录#(1)&"
     (unrelated / ".venv" / "Scripts").mkdir(parents=True)

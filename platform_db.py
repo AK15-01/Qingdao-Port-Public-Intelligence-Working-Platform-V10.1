@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 import shutil
 import sqlite3
-from typing import Iterable, Iterator, Mapping, Optional, Sequence, Union
+from typing import Iterator, Mapping, Optional, Sequence, Union
 from urllib.parse import urlparse
 from uuid import uuid4
 

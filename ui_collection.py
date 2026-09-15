@@ -28,7 +28,6 @@ from source_store import (
     CHECK_FREQUENCIES,
     DEFAULT_SOURCES_PATH,
     SOURCE_PRIORITIES,
-    SOURCE_STATUSES,
     create_source,
     delete_source,
     due_sources,

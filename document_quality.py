@@ -106,14 +106,14 @@ def structured_maritime_warning_facts(title: str, text: str) -> dict[str, str]:
         "lifecycle": r"(解除|继续发布|发布|延期|调整|更新)",
     }
     facts: dict[str, str] = {}
-    for field, pattern in patterns.items():
+    for field_name, pattern in patterns.items():
         matches = re.findall(pattern, combined)
         if matches:
             values = [
                 "".join(item) if isinstance(item, tuple) else str(item)
                 for item in matches
             ]
-            facts[field] = "、".join(dict.fromkeys(values))[:300]
+            facts[field_name] = "、".join(dict.fromkeys(values))[:300]
     return facts
 
 

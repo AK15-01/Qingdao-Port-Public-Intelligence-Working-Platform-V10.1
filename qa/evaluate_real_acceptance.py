@@ -6,7 +6,6 @@ import json
 from pathlib import Path
 import posixpath
 import re
-import sqlite3
 import sys
 from typing import Iterable, Mapping, Sequence
 from zipfile import ZipFile

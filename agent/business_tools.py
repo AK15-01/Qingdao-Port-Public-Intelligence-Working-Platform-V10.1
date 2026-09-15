@@ -1,11 +1,8 @@
 from __future__ import annotations
 
-from datetime import date, timedelta
-import json
-from pathlib import Path
+from datetime import date
 from urllib.parse import urlparse
 
-import pandas as pd
 
 from commercial_report import ReportOptions
 from crawler import CrawlManager

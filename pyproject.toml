@@ -1,0 +1,38 @@
+# PortScope 只做工具配置，不声明为可安装包。
+# 产品版本的唯一来源是根目录 `VERSION` 文件，避免两处版本漂移。
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# 刻意不设 addopts="-q"：CI 与 README 都显式传 -q，若这里再叠加一次
+# 就变成 -qq，会连 "N passed" 这行汇总也一起吞掉，日志无法判读。
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = [
+    ".venv",
+    "backups",
+    "data",
+    "dist",
+    "output",
+]
+
+[tool.ruff.lint]
+# 阻断集合：只包含真实缺陷类规则（语法错误、未定义名称、死代码、危险默认参数、
+# 裸 except、身份/相等误用）。风格类规则（行长、import 排序、PEP604 注解现代化）
+# 由 CI 的 advisory 步骤单独报告，不阻断构建，避免用一次大规模格式化掩盖真实历史。
+select = [
+    "E9",    # 语法/运行时错误
+    "F",     # pyflakes：未定义名称、未使用导入与变量
+    "E401",  # 一行多个 import
+    "E711",  # 与 None 用 == 比较
+    "E712",  # 与 True/False 用 == 比较
+    "E713",  # not ... in
+    "E714",  # not ... is
+    "E721",  # 用 == 比较类型
+    "E722",  # 裸 except
+    "B002",  # ++ 误写
+    "B006",  # 可变默认参数
+    "B012",  # finally 中 break/return 吞掉异常
+    "B018",  # 无效果的表达式语句
+]

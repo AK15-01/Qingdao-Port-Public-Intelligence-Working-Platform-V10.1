@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 import streamlit as st
 
-from public_demo_store import DemoDataUnavailable, PublicDemoRepository
+from public_demo_store import PublicDemoRepository
 from runtime_config import RuntimeConfig, load_runtime_config
 
 
