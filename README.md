@@ -1,14 +1,105 @@
 # PortScope｜青岛港公开情报工作台
 
+[![Python](https://img.shields.io/badge/python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Tests](https://img.shields.io/badge/tests-pytest-0A9EDC?logo=pytest&logoColor=white)](tests/)
+[![Lint](https://img.shields.io/badge/lint-ruff-D7FF64?logo=ruff&logoColor=black)](pyproject.toml)
+[![License](https://img.shields.io/badge/license-source--available-lightgrey)](LICENSE)
+
+<!--
+推送到 GitHub 后，把下面这行取消注释并替换 OWNER/REPO，即可显示真实 CI 状态：
+[![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
+-->
+
+English overview for reviewers: [README.en.md](README.en.md)
+
 PortScope 是供项目所有者本人使用的单机、本地优先公开情报工作台。它用于采集、整理、检索和人工核验公开资料，再输出保留来源与证据的内部简报或客户分析；它不是第三方原文数据库销售系统。
 
-> 当前版本：`0.5.0-beta`。适合在明确责任人、低频采集和逐项复核条件下进行受控内部试运营；尚未完成独立真人审核、真实客户试点或无人值守客户交付，也尚未取得任何外部来源的商业再利用授权。当前真正通过小规模稳定验收的有效来源主要来自山东海事局，其他来源仍受页面结构、TLS、JavaScript、许可或可用性限制。压缩包名称中的“V2.0”不代表产品已达到正式`2.0.0`。
+> 当前版本：`0.5.1-beta`。适合在明确责任人、低频采集和逐项复核条件下进行受控内部试运营；尚未完成独立真人审核、真实客户试点或无人值守客户交付，也尚未取得任何外部来源的商业再利用授权。当前真正通过小规模稳定验收的有效来源主要来自山东海事局，其他来源仍受页面结构、TLS、JavaScript、许可或可用性限制。压缩包名称中的“V2.0”不代表产品已达到正式`2.0.0`。
 
 1. “更新最近7天青岛港相关公开信息”；
 2. “这些信息里最重要的风险是什么？”；
 3. “生成一份面向货代公司的周报”。
 
 系统不是青岛港、海事、气象、政府或交易机构的官方系统。风险与商机分数只用于公开信息排序，不是官方等级，不构成准确预测、法律意见、投资意见或操作指令。`data/sample_events.csv` 中全部是醒目标记的“虚构演示”，不会自动进入 SQLite 或真实报告。
+
+<!-- portscope-readme-status:start -->
+
+## 当前已验证事实
+
+> 由 `scripts/sync_readme_status.py` 从 `data/portscope.db` 生成，不是手写结论。
+> 代码版本 `0.5.1-beta`｜生成于 2026-09-15T18:37:21+10:00｜数据库指纹 `5fbcec36ee4e`
+
+**工程侧（可被第三方复核）**
+
+| 项目 | 数值 |
+|---|---:|
+| 源码行数（不含 .venv/缓存/输出） | 39,319 |
+| 测试函数（不含参数化展开） | 280 |
+| 网络访问的测试 | 0（全部 Mock/fixture） |
+
+**业务侧（诚实口径，0 就写 0）**
+
+| 项目 | 数值 |
+|---|---:|
+| 启用来源 | 1 |
+| 文档（active / 隔离） | 45（9 / 36） |
+| 事件（active） | 13（9） |
+| 证据已验证 / 未解决 | 21 / 0 |
+| 独立真人审核事件 | **0** |
+| 内部使用资格 | **0** |
+| 客户报告资格 | **0** |
+| 历史报告 | 2 |
+| 最近一次成功采集 | 2026-07-29T20:58:35（新增文档 0） |
+
+加粗的 0 是尚未跨过的门槛，不是缺陷：客户报告资格必须由独立真人审核、逐字证据和来源许可共同放行，本项目至今没有为了好看而放宽任何一条。
+
+<!-- portscope-readme-status:end -->
+
+## 系统架构
+
+```mermaid
+flowchart TD
+    S[("白名单来源<br/>enabled + crawl_allowed")]
+    R{"① robots<br/>访问条款"}
+    F{"② SSRF + 白名单<br/>每跳重定向重校验"}
+    X["③ 增量发现 · 获取 · 清洗<br/>去重 + 原文归档 + 版本链"]
+    Q{"④ 正文质量门禁<br/>乱码 · 模板噪声 · 缺日期"}
+    P["⑤ 结构化抽取<br/>Pydantic 严格校验"]
+    E["⑥ 逐字证据绑定<br/>版本 + content_hash + 字符偏移"]
+    MIX["⑦ 混合检索<br/>FTS5 + 向量 + 引用强制校验"]
+    HR{"⑧ 独立真人审核<br/>自动与代理标注不计入"}
+    I["内部研究资格"]
+    C["客户交付资格<br/>+ 不可变快照 SHA-256"]
+    QUAR["隔离留档<br/>不进 AI / 索引 / 报告"]
+
+    S --> R
+    R -->|允许| F
+    R -->|拒绝| QUAR
+    F -->|通过| X
+    F -->|拒绝| QUAR
+    X --> Q
+    Q -->|合格| P
+    Q -->|不合格| QUAR
+    P --> E
+    E --> MIX
+    E --> HR
+    HR -->|通过| I
+    HR -->|驳回| QUAR
+    I --> C
+
+    classDef gate fill:#fff4e5,stroke:#d97706,color:#7c2d12;
+    classDef bad fill:#fee2e2,stroke:#dc2626,color:#7f1d1d;
+    classDef good fill:#dcfce7,stroke:#16a34a,color:#14532d;
+    class R,F,Q,HR gate;
+    class QUAR bad;
+    class I,C good;
+```
+
+设计上的三条硬约束，也是这个项目与一般「爬虫 + RAG」demo 的差别：
+
+1. **门禁由确定性程序判断，不由模型判断。** robots、SSRF、白名单、正文质量、许可与审核资格全部是代码规则；AI 只能在门禁之内做抽取与问答，不能启用来源、不能自我确认、不能覆盖确定性评分。
+2. **每条结论都能回到原文的某几个字符。** 证据绑定记录文档版本、`content_hash` 与字符起止位置，只允许空白归一化，不接受语义近似；文档更新后旧引用自动失效，未定位的证据不得进入执行摘要或客户交付版。
+3. **自动指标与独立真人金标准分开计。** `ai_assistant`、`codex_agent`、`automatic_rule` 的标注一律不计入人工准确率——历史上曾因为混算而作废过一整份验收报告，作废记录保留在 `qa/real_acceptance_report.md` 顶部。
 
 ## 默认日常工作台
 
@@ -368,6 +459,15 @@ python -m pip install -r requirements.txt
 streamlit run app.py
 ```
 
+`requirements.txt` 是最小运行集合，不含本地向量栈。缺少它时 SQLite FTS5 关键词检索、
+全部测试和公网 Demo 都可以正常运行，Chunk 保持“待向量化”。需要语义向量检索时再装：
+
+```bash
+python -m pip install -r requirements-rag.txt
+```
+
+桌面完整版由 `setup_environment.bat` 按 `requirements-lock.txt` 安装，不受上述拆分影响。
+
 公网模式的 PowerShell 启动示例：
 
 ```powershell
@@ -381,12 +481,14 @@ Linux / Render 启动命令：
 PUBLIC_DEMO_MODE=true streamlit run app.py --server.address 0.0.0.0 --server.port "${PORT:-8501}"
 ```
 
-Streamlit Community Cloud 将入口文件设为 `app.py`，在 Advanced settings → Secrets 中配置：
+Streamlit Community Cloud 将入口文件设为 `app.py`，Python 版本选 3.11，在 Advanced settings → Secrets 中配置：
 
 ```toml
 PUBLIC_DEMO_MODE = true
 DEEPSEEK_API_KEY = ""
 ```
+
+平台会自动安装仓库根目录的 `requirements.txt`。**不要把 `requirements-rag.txt` 加进云端依赖**：`sentence-transformers` 会带入约 2GB 的 `torch`，超出免费档资源上限。公网 Demo 只读演示库，不做向量检索，也不需要它。
 
 Demo 展示不需要 DeepSeek Key。没有 Key 时历史演示数据正常显示，页面仅提示 AI 实时分析未启用。若部署环境确需提供 Key，只能使用平台环境变量或 Streamlit Secrets；公网模式不会读取项目根目录 `.env`，也不会提供网页端保存 Key 的入口。配置优先级为“环境变量 → Streamlit Secrets → 安全默认值”。
 
@@ -446,6 +548,20 @@ python -m pytest -q
 
 测试覆盖原有事件、草稿、SSRF、生命周期、风险评分、质量和报告，以及页面密钥保存/清除、密钥不入库、27工具注册、Pydantic拒绝、未注册工具拒绝、确认门禁、对话隔离、`reasoning_content`回传、循环停止、本地回退、单页来源接入、报告三文件、交付包排除规则和全部Streamlit页面。pytest不访问官方站点或DeepSeek。
 
+### 持续集成与静态检查
+
+`.github/workflows/ci.yml` 在每次 push 与 PR 上执行三个互不替代的作业：
+
+| 作业 | 平台 | 内容 |
+|---|---|---|
+| 全量测试 | windows-latest · Python 3.11 | `pytest -q`；桌面完整版的启动器、批处理与路径行为只在 Windows 上有意义 |
+| 静态检查 | ubuntu-latest | `ruff check .` 阻断真实缺陷类规则；风格类规则另跑一次 `--exit-zero`，只报告不阻断 |
+| 公网 Demo 部署路径 | ubuntu-latest | `deployment_check.py`、`scripts/scan_public_demo_safety.py`、`security_audit.py` 与只读约束用例；这条路径与桌面版不同，必须单独验证 |
+
+`pyproject.toml` 中的 ruff 阻断集合只包含语法错误、未定义名称、死代码、可变默认参数、裸 `except`、身份/相等误用等真实缺陷类规则。行长、import 排序和 PEP 604 注解现代化等风格项只报告不阻断——历史代码的真实面貌比一次性大规模格式化更有参考价值。
+
+CI 直接使用 `requirements.txt`。该文件刻意不含本地向量栈（`chromadb`、`sentence-transformers` 及其依赖 `torch`，合计约 2GB），因此 CI 安装很快，公网 Demo 也能直接部署到 Streamlit Community Cloud（只读仓库根目录的 `requirements.txt`，资源上限约 1GB）。这条约束由 `tests/test_requirements_layout.py` 强制校验：根清单混入重型依赖、可选清单没有继承根清单、或有依赖未在 `requirements-lock.txt` 中锁定，都会让测试失败；其中一条用例还会在屏蔽 `chromadb`/`sentence-transformers`/`torch` 的子进程里真实导入 `app`、`ui_public_demo` 与 `rag/*`，确保缺少向量栈时部署路径依然可用。
+
 真实来源健康验收不在pytest中自动运行。用户在“高级管理 → 更新公开数据 → 克制地验收真实来源”明确勾选后，系统每个来源只读1个列表页、发现最多5篇、下载最多2篇、不翻页、每次请求间隔至少3秒，并保存“正常 / 部分可用 / 结构变化 / robots或条款待确认 / 连接失败 / 暂停使用”健康度。
 
 ## 仍需人工处理的情况
@@ -481,6 +597,8 @@ commercial_report.py       DOCX、HTML和Excel生成
 package_release.py         排除环境、密钥、真实数据和缓存的交付打包
 web_extractor.py           原有单URL SSRF安全提取器
 data_validator.py          完整数据质量校验
+state_audit.py             由SQLite生成真实状态快照与过期检测
+scripts/sync_readme_status.py  README「当前已验证事实」区块同步
 risk_engine.py             透明确定性评分
 lifecycle.py               风险生命周期
 ```

@@ -1,12 +1,12 @@
-<!-- portscope-state-audit:{"database_sha256":"89c59602b9efc4166377b644ea97939e121c0377a49e6853655298c0eec89657","code_version":"0.5.0-beta","generated_at":"2026-07-29T17:00:50+10:00"} -->
+<!-- portscope-state-audit:{"database_sha256":"5fbcec36ee4e563b4f853fae2c1386627a9887c64a9cb13cecb7229e9ec68d7f","code_version":"0.5.1-beta","generated_at":"2026-09-15T18:37:21+10:00"} -->
 # PortScope 当前真实状态审计
 
 > 本文件由当前 SQLite 动态生成。数据库哈希或代码版本变化后，本文件即为过期快照，必须重新生成。
 
-- 生成时间：2026-07-29T17:00:50+10:00
-- 代码版本：`0.5.0-beta`
+- 生成时间：2026-09-15T18:37:21+10:00
+- 代码版本：`0.5.1-beta`
 - 数据库：`data/portscope.db`
-- 数据库 SHA-256：`89c59602b9efc4166377b644ea97939e121c0377a49e6853655298c0eec89657`
+- 数据库 SHA-256：`5fbcec36ee4e563b4f853fae2c1386627a9887c64a9cb13cecb7229e9ec68d7f`
 
 ## 数据状态
 
@@ -28,21 +28,21 @@
 |---|---:|
 | failed | 4 |
 | partially_succeeded | 1 |
-| succeeded | 19 |
+| succeeded | 22 |
 
 | crawl_source_runs 状态 | 数量 |
 |---|---:|
 | failed | 1 |
 | partially_succeeded | 1 |
-| succeeded | 5 |
+| succeeded | 8 |
 
 ## 启用来源
 
-- `SRC-2FF28D3D7FC5` 山东海事局海上风险预警｜健康：正常｜最近成功：2026-07-29T01:38:59+10:00
+- `SRC-2FF28D3D7FC5` 山东海事局海上风险预警｜健康：正常｜最近成功：2026-07-29T20:58:35+10:00
 
 ## 最新成功采集
 
-`CRAWL-F5A47CD0DA84`，2026-07-29T01:38:59+10:00，新增文档 0，新增事件 0
+`CRAWL-8122A5661768`，2026-07-29T20:58:35+10:00，新增文档 0，新增事件 0
 
 ## 口径说明
 
