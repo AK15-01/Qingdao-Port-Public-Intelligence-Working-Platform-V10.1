@@ -1,30 +1,34 @@
-# 运行 PortScope 所需的最小依赖集合。
+# 运行 PortScope 所需的基础依赖集合。CI 与公网 Demo 都安装本文件。
 #
-# 这份清单刻意不包含本地向量栈（chromadb、sentence-transformers 及其依赖 torch，
-# 合计约 2GB）。原因有两条：
-#   1. rag/embeddings.py 与 rag/vector_store.py 对两者做函数内惰性导入，缺失时
-#      SQLite FTS5 关键词检索、全部 pytest 用例和公网 Demo 都可以正常运行；
-#   2. Streamlit Community Cloud 只读取仓库根目录的 requirements.txt，且资源上限
-#      约 1GB，把 torch 放进来会直接导致构建失败。
+# 两条约定：
 #
-# 需要语义向量检索时，额外安装：pip install -r requirements-rag.txt
+# 1. 版本全部固定，且与 requirements-lock.txt 中已验证的版本一致。
+#    区间约束会让 GitHub Actions 与 Streamlit Community Cloud 在不同时间装到
+#    不同版本，出现「本地绿、云端红」。实测案例：pypdf 6.18.1 的文本抽取结果
+#    与锁定的 6.14.2 不同，会把同一份乱码 PDF 从「编码异常」改判为
+#    「信息密度过低」——安全结果同样是拦截，但数据库里的质量分类语义变了。
+#    一致性由 tests/test_requirements_layout.py 强制校验。
+#
+# 2. 本文件不含本地向量栈（chromadb、sentence-transformers 及其大型模型依赖）。
+#    rag/embeddings.py 与 rag/vector_store.py 对两者做函数内惰性导入，缺失时
+#    SQLite FTS5 关键词检索、全部 pytest 用例和公网 Demo 都可正常运行。
+#    公网 Demo 不做向量检索，把它们移出基础依赖可以显著减少构建体积、安装时间
+#    与内存占用，提高免费云环境的部署稳定性。
+#    需要语义向量检索时额外安装：pip install -r requirements-rag.txt
+#
 # 桌面完整版由 setup_environment.bat 按 requirements-lock.txt 安装，不受本文件影响。
 
 # Runtime
-streamlit>=1.36,<2.0
-pandas>=2.2,<3.0
-requests>=2.32,<3.0
-beautifulsoup4>=4.12,<5.0
-python-docx>=1.1,<2.0
-pydantic>=2.7,<3.0
-python-dotenv>=1.0,<2.0
-# pypdf 固定到 requirements-lock.txt 中已验证的版本：不同小版本的文本抽取结果
-# 会改变正文质量门禁的判定理由（实测 6.18.1 会把乱码 PDF 判成「信息密度过低」
-# 而非「编码异常」）。tests/test_pdf_quality_and_value.py 对该理由有断言，
-# 因此这里必须与锁定版本一致，不能放宽为区间。
+streamlit==1.50.0
+pandas==2.3.3
+requests==2.32.5
+beautifulsoup4==4.15.0
+python-docx==1.2.0
+pydantic==2.12.5
+python-dotenv==1.2.1
 pypdf==6.14.2
-openpyxl>=3.1,<4.0
-lxml>=5.0,<7.0
+openpyxl==3.1.5
+lxml==6.1.1
 
 # Test
-pytest>=8.0,<9.0
+pytest==8.4.2

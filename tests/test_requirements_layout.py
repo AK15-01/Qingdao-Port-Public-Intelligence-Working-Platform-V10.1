@@ -1,15 +1,16 @@
 """依赖清单的分层约束。
 
-分层原因：Streamlit Community Cloud 只读取仓库根目录的 `requirements.txt`，
-且免费档资源上限约 1GB。若把 `sentence-transformers`（连带 torch，约 2GB）
-放进去，公网 Demo 会直接构建失败。因此：
+Streamlit Community Cloud 从应用的依赖文件安装环境（仓库根目录或入口文件
+同级目录；本项目 `app.py` 在根目录）。公网 Demo 不使用本地向量检索，因此把
+`chromadb`、`sentence-transformers` 及其大型模型依赖移出基础清单，以减少构建
+体积、安装时间与内存占用，提高免费云环境的部署稳定性。分层如下：
 
-- `requirements.txt`      最小运行集合，CI 与公网 Demo 都装它；
+- `requirements.txt`      基础运行集合，CI 与公网 Demo 都装它；版本全部固定；
 - `requirements-rag.txt`  可选本地向量栈，只有需要语义检索时才装；
-- `requirements-lock.txt` 桌面完整版的精确锁定版本。
+- `requirements-lock.txt` 桌面完整版的精确锁定版本，也是上面固定版本的来源。
 
-本文件把上述约束变成可执行断言，避免有人「顺手」把 torch 加回根清单后
-在部署时才发现问题。
+本文件把上述约束变成可执行断言，避免两类回归：有人「顺手」把重型依赖加回
+基础清单；或把固定版本放宽成区间，导致云端与 CI 在不同时间装到不同版本。
 """
 
 from __future__ import annotations
@@ -56,12 +57,12 @@ def _packages(path: Path) -> dict[str, str]:
     return entries
 
 
-def test_root_requirements_stay_cloud_deployable():
+def test_root_requirements_stay_lightweight_for_cloud_deployment():
     root = _packages(PROJECT_ROOT / "requirements.txt")
     offenders = sorted(HEAVY_PACKAGES & set(root))
     assert offenders == [], (
-        "requirements.txt 必须保持可直接部署到 Streamlit Community Cloud；"
-        f"以下重型依赖应移到 requirements-rag.txt：{offenders}"
+        "基础清单应保持轻量，以缩短云端构建时间并降低内存占用；"
+        f"以下重型依赖属于可选向量栈，应留在 requirements-rag.txt：{offenders}"
     )
 
 
@@ -103,12 +104,19 @@ def test_pinned_packages_match_the_lock_file_exactly():
     assert not mismatched, f"固定版本与 requirements-lock.txt 不一致：{mismatched}"
 
 
-def test_pypdf_stays_pinned_because_a_quality_gate_asserts_on_its_output():
-    """回归：pypdf 6.18.1 会把乱码 PDF 判成「信息密度过低」而非「编码异常」，
-    使 tests/test_pdf_quality_and_value.py 在 CI 上失败。放宽为区间会让 CI 随
-    上游发版随机变红。"""
-    line = _packages(PROJECT_ROOT / "requirements.txt")["pypdf"]
-    assert line.startswith("pypdf=="), f"pypdf 必须固定版本，当前为 {line}"
+def test_every_base_dependency_is_pinned_not_ranged():
+    """基础清单必须逐个固定版本，GitHub Actions 与云端才会装到同一套依赖。
+
+    区间约束会随上游发版漂移。已发生过的实例：pypdf 6.18.1 把乱码 PDF 从
+    「编码异常」改判为「信息密度过低」，使 tests/test_pdf_quality_and_value.py
+    在纯净环境失败——本地绿、云端红。
+    """
+    ranged = {
+        name: line
+        for name, line in _packages(PROJECT_ROOT / "requirements.txt").items()
+        if "==" not in line
+    }
+    assert not ranged, f"基础清单不得使用区间约束，请固定到 requirements-lock.txt 的版本：{ranged}"
 
 
 def test_public_demo_path_imports_without_the_vector_stack():

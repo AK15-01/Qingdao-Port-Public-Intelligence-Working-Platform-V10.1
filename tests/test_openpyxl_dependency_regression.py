@@ -161,7 +161,10 @@ def test_home_gracefully_reports_missing_openpyxl_and_keeps_other_regions(
 def test_requirements_and_lock_contain_verified_openpyxl():
     requirements = (PROJECT_ROOT / "requirements.txt").read_text(encoding="utf-8")
     lock = (PROJECT_ROOT / "requirements-lock.txt").read_text(encoding="utf-8")
-    assert "openpyxl>=3.1,<4.0" in requirements
+    # 基础清单已由区间改为固定版本（见 tests/test_requirements_layout.py），
+    # 因此这里断言的是同一个已验证版本，而不是区间字符串。用意不变：
+    # requirements 与 lock 必须声明同一个经过验证的 openpyxl。
+    assert "openpyxl==3.1.5" in requirements
     assert "openpyxl==3.1.5" in lock
     assert "et-xmlfile==2.0.0" in lock
 

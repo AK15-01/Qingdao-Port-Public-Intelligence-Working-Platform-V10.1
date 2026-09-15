@@ -4,11 +4,7 @@
 [![Tests](https://img.shields.io/badge/tests-pytest-0A9EDC?logo=pytest&logoColor=white)](tests/)
 [![Lint](https://img.shields.io/badge/lint-ruff-D7FF64?logo=ruff&logoColor=black)](pyproject.toml)
 [![License](https://img.shields.io/badge/license-source--available-lightgrey)](LICENSE)
-
-<!--
-推送到 GitHub 后，把下面这行取消注释并替换 OWNER/REPO，即可显示真实 CI 状态：
-[![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
--->
+[![CI](https://github.com/AK15-01/Qingdao-Port-Public-Intelligence-Working-Platform-V10.1/actions/workflows/ci.yml/badge.svg)](https://github.com/AK15-01/Qingdao-Port-Public-Intelligence-Working-Platform-V10.1/actions/workflows/ci.yml)
 
 English overview for reviewers: [README.en.md](README.en.md)
 
@@ -488,7 +484,7 @@ PUBLIC_DEMO_MODE = true
 DEEPSEEK_API_KEY = ""
 ```
 
-平台会自动安装仓库根目录的 `requirements.txt`。**不要把 `requirements-rag.txt` 加进云端依赖**：`sentence-transformers` 会带入约 2GB 的 `torch`，超出免费档资源上限。公网 Demo 只读演示库，不做向量检索，也不需要它。
+平台会从应用的依赖文件安装环境（仓库根目录或入口文件同级目录；本项目 `app.py` 位于根目录，因此使用根目录的 `requirements.txt`）。**不要把 `requirements-rag.txt` 加进云端依赖**：`sentence-transformers` 会带入约 2GB 的 `torch`，显著拉长构建时间并抬高内存占用。公网 Demo 只读演示库、不做向量检索，并不需要它。
 
 Demo 展示不需要 DeepSeek Key。没有 Key 时历史演示数据正常显示，页面仅提示 AI 实时分析未启用。若部署环境确需提供 Key，只能使用平台环境变量或 Streamlit Secrets；公网模式不会读取项目根目录 `.env`，也不会提供网页端保存 Key 的入口。配置优先级为“环境变量 → Streamlit Secrets → 安全默认值”。
 
@@ -560,7 +556,12 @@ python -m pytest -q
 
 `pyproject.toml` 中的 ruff 阻断集合只包含语法错误、未定义名称、死代码、可变默认参数、裸 `except`、身份/相等误用等真实缺陷类规则。行长、import 排序和 PEP 604 注解现代化等风格项只报告不阻断——历史代码的真实面貌比一次性大规模格式化更有参考价值。
 
-CI 直接使用 `requirements.txt`。该文件刻意不含本地向量栈（`chromadb`、`sentence-transformers` 及其依赖 `torch`，合计约 2GB），因此 CI 安装很快，公网 Demo 也能直接部署到 Streamlit Community Cloud（只读仓库根目录的 `requirements.txt`，资源上限约 1GB）。这条约束由 `tests/test_requirements_layout.py` 强制校验：根清单混入重型依赖、可选清单没有继承根清单、或有依赖未在 `requirements-lock.txt` 中锁定，都会让测试失败；其中一条用例还会在屏蔽 `chromadb`/`sentence-transformers`/`torch` 的子进程里真实导入 `app`、`ui_public_demo` 与 `rag/*`，确保缺少向量栈时部署路径依然可用。
+CI 直接使用 `requirements.txt`，与 Streamlit Community Cloud 安装的是同一份文件、同一批固定版本，因此「GitHub Actions 绿、云端红」这类差异被从源头消除。
+
+该文件的两条约定由 `tests/test_requirements_layout.py` 强制校验：
+
+- **版本全部固定**，且与 `requirements-lock.txt` 一致。区间约束会随上游发版漂移——已发生过的实例是 `pypdf` 6.18.1 把同一份乱码 PDF 从「编码异常」改判为「信息密度过低」，安全结果同样是拦截，但质量分类语义变了，`tests/test_pdf_quality_and_value.py` 在纯净环境直接失败。
+- **不含本地向量栈**（`chromadb`、`sentence-transformers` 及其大型模型依赖）。公网 Demo 不做向量检索，移出后构建体积、安装时间和内存占用都明显下降。其中一条用例会在屏蔽 `chromadb`/`sentence-transformers`/`torch` 的子进程里真实导入 `app`、`ui_public_demo` 与 `rag/*`，确保缺少向量栈时部署路径依然可用。
 
 真实来源健康验收不在pytest中自动运行。用户在“高级管理 → 更新公开数据 → 克制地验收真实来源”明确勾选后，系统每个来源只读1个列表页、发现最多5篇、下载最多2篇、不翻页、每次请求间隔至少3秒，并保存“正常 / 部分可用 / 结构变化 / robots或条款待确认 / 连接失败 / 暂停使用”健康度。
 
