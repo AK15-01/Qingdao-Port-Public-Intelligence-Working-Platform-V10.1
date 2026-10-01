@@ -1,0 +1,4 @@
+# Additional dependencies for the isolated Web V2 preview.
+# Install together with the existing requirements.txt.
+fastapi==0.119.0
+uvicorn[standard]==0.37.0
