@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PortScope 港航公开信息监测与分析平台 Web V2 只读预览" />
+  <title>PortScope · 港航公开信息监测与分析平台</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">P</div>
+        <div>
+          <strong>PortScope</strong>
+          <span>PUBLIC INTELLIGENCE</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard"><span>▦</span>平台概览</button>
+        <button class="nav-item" data-view="events"><span>◎</span>事件浏览</button>
+        <button class="nav-item" data-view="sources"><span>⌁</span>数据来源</button>
+        <button class="nav-item" data-view="about"><span>ⓘ</span>关于项目</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div><i class="status-dot"></i>公网只读 Demo</div>
+        <small>不开放采集、AI 调用或写入操作</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">PORTSCOPE / WEB V2 PREVIEW</span>
+          <strong id="pageTitle">平台概览</strong>
+        </div>
+        <div class="topbar-actions">
+          <span id="healthBadge" class="health checking">正在连接数据</span>
+          <div class="avatar">SSY</div>
+        </div>
+      </header>
+
+      <section class="content">
+        <section id="dashboard" class="view active">
+          <div class="hero">
+            <div>
+              <span class="hero-label">青岛港 / 山东港航公开数据试验场景</span>
+              <h1>把分散的公开资料，转化为<br><em>可检索、可追溯的行业情报。</em></h1>
+              <p>公开信息采集后的质量控制、结构化抽取、事件整理与证据追溯展示。当前页面仅连接脱敏只读演示库。</p>
+            </div>
+            <div class="hero-meta">
+              <span>READ ONLY</span>
+              <b id="latestUpdate">—</b>
+              <small>最近数据更新时间</small>
+            </div>
+          </div>
+
+          <div class="metrics">
+            <article class="metric-card">
+              <span>已采集文档</span>
+              <strong id="documents">—</strong>
+              <small>演示库文档总量</small>
+            </article>
+            <article class="metric-card">
+              <span>合格正文</span>
+              <strong id="qualified">—</strong>
+              <small id="qualityRate">质量通过率 —</small>
+            </article>
+            <article class="metric-card">
+              <span>结构化事件</span>
+              <strong id="eventCount">—</strong>
+              <small>可检索事件记录</small>
+            </article>
+            <article class="metric-card">
+              <span>启用来源</span>
+              <strong id="sourceCount">—</strong>
+              <small>当前公开数据源</small>
+            </article>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="panel">
+              <div class="panel-head">
+                <div>
+                  <span class="eyebrow">EVENT ACTIVITY</span>
+                  <h2>近期事件分布</h2>
+                </div>
+                <span class="subtle">真实演示库数据</span>
+              </div>
+              <div class="chart-wrap"><canvas id="trendChart" width="900" height="300"></canvas></div>
+            </article>
+
+            <article class="panel signal-panel">
+              <div class="panel-head">
+                <div>
+                  <span class="eyebrow">QUALITY & REVIEW</span>
+                  <h2>数据可信边界</h2>
+                </div>
+              </div>
+              <div class="signal-body">
+                <div class="signal-row"><span>质量门禁</span><b>正文先校验，再进入结构化处理</b></div>
+                <div class="signal-row"><span>来源追溯</span><b>保留原始发布机构与链接</b></div>
+                <div class="signal-row"><span>待复核事件</span><b id="pendingReview">—</b></div>
+                <div class="signal-row"><span>风险标签</span><div id="riskTags" class="tag-list"></div></div>
+              </div>
+            </article>
+          </div>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <span class="eyebrow">LATEST INTELLIGENCE</span>
+                <h2>近期重点事件</h2>
+              </div>
+              <button class="text-button" data-jump="events">查看全部 →</button>
+            </div>
+            <div id="latestEvents" class="event-list">
+              <div class="empty">正在读取事件数据…</div>
+            </div>
+          </article>
+
+          <article class="pipeline-panel">
+            <span class="eyebrow">PROCESS</span>
+            <h2>公开信息处理链路</h2>
+            <div class="pipeline">
+              <div><b>01</b><span>信息采集</span></div>
+              <i></i>
+              <div><b>02</b><span>正文质量门禁</span></div>
+              <i></i>
+              <div><b>03</b><span>AI 结构化抽取</span></div>
+              <i></i>
+              <div><b>04</b><span>事件数据库</span></div>
+              <i></i>
+              <div><b>05</b><span>检索与证据追溯</span></div>
+            </div>
+          </article>
+        </section>
+
+        <section id="events" class="view">
+          <div class="section-heading">
+            <div><span class="eyebrow">EVENT LIBRARY</span><h1>事件浏览</h1><p>检索事实摘要、来源与证据状态，不展示正式工作区原始数据。</p></div>
+          </div>
+          <article class="panel filters">
+            <input id="keywordInput" type="search" placeholder="搜索标题、摘要、主体或区域…" />
+            <select id="categorySelect"><option value="">全部事件类型</option></select>
+            <select id="sourceSelect"><option value="">全部来源</option></select>
+            <button id="searchButton" class="primary-button">检索</button>
+          </article>
+          <div class="result-meta"><span id="resultCount">—</span><button id="clearFilters" class="text-button">清除筛选</button></div>
+          <div id="eventLibrary" class="event-grid"><div class="empty">正在加载…</div></div>
+        </section>
+
+        <section id="sources" class="view">
+          <div class="section-heading">
+            <div><span class="eyebrow">SOURCE TRACEABILITY</span><h1>数据来源</h1><p>展示公开来源入口与当前启用状态。公开可访问不等于允许全文再分发。</p></div>
+          </div>
+          <div id="sourceGrid" class="source-grid"><div class="empty">正在加载…</div></div>
+        </section>
+
+        <section id="about" class="view">
+          <div class="section-heading">
+            <div><span class="eyebrow">ABOUT PORTSCOPE</span><h1>关于项目</h1><p>从数据处理脚本到可复核的信息工作台。</p></div>
+          </div>
+          <div class="about-grid">
+            <article class="panel prose">
+              <h2>项目定位</h2>
+              <p>PortScope 是面向港航公开信息场景的个人技术项目。系统尝试把分散网页资料经过正文质量校验、结构化事件抽取和证据保留，组织成可检索、可追溯的分析工作流。</p>
+              <p>本 Web V2 为公网只读预览，不接受任意网址，不触发采集、AI 调用、报告生成或数据库写入。</p>
+            </article>
+            <article class="panel prose">
+              <h2>可信边界</h2>
+              <p>页面仅展示脱敏摘要和必要短证据。AI 抽取结果可能存在误差；重要信息应回到原始发布机构核验。未经独立人工复核的内容不应作为正式业务结论。</p>
+            </article>
+          </div>
+          <article class="architecture">
+            <span>Browser</span><i>HTTPS / JSON</i><span>FastAPI</span><i>read only</i><span>PublicDemoRepository</span><i>SQLite</i><span>Sanitized Demo DB</span>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="eventDialog">
+    <button class="dialog-close" aria-label="关闭">×</button>
+    <div id="dialogBody"></div>
+  </dialog>
+
+  <div id="toast" class="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
